@@ -1,22 +1,20 @@
 import type { ComponentType } from 'react'
+import { SpringCardsDemo } from './SpringCards'
 
 export type Pattern = {
   id: string
   title: string
   description: string
   status: 'draft' | 'ready'
-  component: ComponentType<{ onBack: () => void }>
+  demo: ComponentType
 }
-
-// Add new patterns here — they appear automatically on the homepage
-import { SpringCards } from './SpringCards'
 
 export const PATTERNS: Pattern[] = [
   {
     id: 'spring-cards',
     title: 'Spring card entrance',
-    description: 'Cards stagger in with spring physics on mount. A starting point for list and grid entrances.',
+    description: 'Cards stagger in with spring physics on mount.',
     status: 'draft',
-    component: SpringCards,
+    demo: SpringCardsDemo,
   },
 ]

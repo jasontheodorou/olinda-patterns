@@ -1,15 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import '@mantine/core/styles.css';
 
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
   margin: 0;
-  background: #FAF8F6;
-  color: #333333;
-  font-family: 'Open Sans', -apple-system, 'Segoe UI', sans-serif;
+  background: #F5F2EE;
+  color: #202221;
+  font-family: 'Inter', arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
+
+a { color: #405748; }
+a:hover { color: #202221; }
 
 .skip-link {
   position: absolute;
@@ -17,11 +22,10 @@ body {
   left: 8px;
   z-index: 9999;
   padding: 8px 16px;
-  background: #213D59;
-  color: #fff;
+  background: #998848;
+  color: #ffffff;
   font-size: 14px;
   font-weight: 600;
-  border-radius: 0 0 6px 6px;
   text-decoration: none;
 }
 .skip-link:focus { top: 0; }
