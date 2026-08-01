@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { PasswordGate, isGateOpen } from './PasswordGate'
 import { Layout } from './Layout'
 import { HomePage } from './pages/HomePage'
 import { PatternsPage } from './pages/PatternsPage'
@@ -6,7 +7,7 @@ import { PatternPage } from './pages/PatternPage'
 import { EmptyPage } from './pages/EmptyPage'
 import { PATTERNS } from './patterns'
 
-type Section = 'home' | 'patterns' | 'templates' | 'workflows'
+type Section = 'home' | 'patterns' | 'templates' | 'themes'
 
 function sectionFor(view: string): Section {
   if (view === 'templates') return 'templates'
@@ -16,7 +17,10 @@ function sectionFor(view: string): Section {
 }
 
 function App() {
+  const [unlocked, setUnlocked] = useState(() => isGateOpen())
   const [view, setView] = useState<string>('home')
+
+  if (!unlocked) return <PasswordGate onUnlock={() => setUnlocked(true)} />
 
   const pattern = PATTERNS.find(p => p.id === view)
 

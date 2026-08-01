@@ -22,4 +22,4 @@ npm install
 npm run dev
 ```
 
-Runs at `http://localhost:3008`
+Open the URL shown in your terminal after running `npm run dev`.
