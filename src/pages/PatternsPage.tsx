@@ -1,5 +1,5 @@
 import { Box, Container, SimpleGrid, Stack, Text } from '@mantine/core'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import { PATTERNS } from '../patterns'
 import { C, font } from '../tokens'
 
@@ -48,9 +48,9 @@ export function PatternsPage({ onSelectPattern }: Props) {
                       <Text style={{
                         fontSize: 11, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase',
                         fontFamily: font, padding: '2px 7px', flexShrink: 0,
-                        background: p.status === 'ready' ? C.teal : 'transparent',
-                        color: p.status === 'ready' ? C.surface : C.muted,
-                        border: `1px solid ${p.status === 'ready' ? C.teal : C.border}`,
+                        background: p.status === 'ready' ? C.teal : p.status === 'experimental' ? C.gold : 'transparent',
+                        color: p.status === 'ready' || p.status === 'experimental' ? C.surface : C.muted,
+                        border: `1px solid ${p.status === 'ready' ? C.teal : p.status === 'experimental' ? C.gold : C.border}`,
                       }}>
                         {p.status}
                       </Text>

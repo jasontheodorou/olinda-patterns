@@ -1,0 +1,10 @@
+{
+  "name": "spring-cards",
+  "version": "0.1.0",
+  "title": "Spring card entrance",
+  "description": "Cards stagger in with spring physics on mount.",
+  "status": "draft",
+  "dependencies": ["motion", "@mantine/core", "@mantine/hooks"],
+  "files": ["SpringCards.tsx"],
+  "framework": "react"
+}
