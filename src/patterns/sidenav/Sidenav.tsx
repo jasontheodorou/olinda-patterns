@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { ChevronDown, CheckCircle2, Circle, Lock } from 'lucide-react'
 import { T } from '../../tokens'

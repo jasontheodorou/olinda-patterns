@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react'
 import { motion } from 'motion/react'
 import { Check, ArrowRight } from 'lucide-react'
 import { T } from '../../tokens'

@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'motion/react'
+import { motion, useScroll, useTransform, type MotionValue } from 'motion/react'
 import { C, font } from '../../tokens'
 
 const IMAGE_URL =
@@ -10,7 +10,7 @@ const HEADING = 'Visual imagery brings value to life across use cases and surfac
 // ─── Shared scene ────────────────────────────────────────────────────────────
 
 interface SceneProps {
-  coverWidthPct: ReturnType<typeof useTransform>
+  coverWidthPct: MotionValue<number>
   fontSize?: string
   paddingX?: number
   textBottom?: number
@@ -24,8 +24,8 @@ function Scene({
   textBottom = 72,
   maxWidth = 620,
 }: SceneProps) {
-  const coverWidth = useTransform(coverWidthPct, (v: number) => `${v}%`)
-  const whiteClip  = useTransform(coverWidthPct, (v: number) => `inset(0 0 0 ${v}%)`)
+  const coverWidth = useTransform(coverWidthPct, (v) => `${v}%`)
+  const whiteClip  = useTransform(coverWidthPct, (v) => `inset(0 0 0 ${v}%)`)
 
   const textStyle = {
     fontFamily: font,

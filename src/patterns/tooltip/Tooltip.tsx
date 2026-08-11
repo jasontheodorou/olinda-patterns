@@ -13,7 +13,7 @@ interface TooltipProps {
 
 export function Tooltip({ content, placement = 'top', delay = 300, children }: TooltipProps) {
   const [open, setOpen] = useState(false)
-  const timer = useRef<number>()
+  const timer = useRef<number | undefined>(undefined)
 
   const show = () => { window.clearTimeout(timer.current); timer.current = window.setTimeout(() => setOpen(true), delay) }
   const hide = () => { window.clearTimeout(timer.current); setOpen(false) }
@@ -52,7 +52,9 @@ export function Tooltip({ content, placement = 'top', delay = 300, children }: T
   )
 }
 
-const POSITION: Record<Placement, { base: React.CSSProperties; offset: React.CSSProperties; rest: React.CSSProperties }> = {
+type Motion2D = { x?: number; y?: number }
+
+const POSITION: Record<Placement, { base: React.CSSProperties; offset: Motion2D; rest: Motion2D }> = {
   top:    { base: { bottom: 'calc(100% + 6px)', left: '50%', transform: 'translateX(-50%)' }, offset: { y: 4 }, rest: { y: 0 } },
   bottom: { base: { top: 'calc(100% + 6px)',    left: '50%', transform: 'translateX(-50%)' }, offset: { y: -4 }, rest: { y: 0 } },
   left:   { base: { right: 'calc(100% + 6px)',  top: '50%',  transform: 'translateY(-50%)' }, offset: { x: 4 }, rest: { x: 0 } },
