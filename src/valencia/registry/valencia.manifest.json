@@ -1,0 +1,392 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-12T15:13:03.256Z",
+  "patterns": [
+    {
+      "id": "large-heading",
+      "name": "Large heading",
+      "description": "A large heading that reveals word-by-word behind a soft mask.",
+      "goodFor": [
+        "Homepages",
+        "Section openings",
+        "Editorial covers"
+      ],
+      "collections": [
+        "Editorial",
+        "Bold",
+        "Quiet"
+      ],
+      "styles": [
+        "quiet",
+        "editorial",
+        "bold"
+      ],
+      "status": "ready",
+      "component": "KineticHeadline",
+      "runtime": "dom",
+      "weight": "light",
+      "accessibility": {
+        "reducedMotion": "supported",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": false
+      },
+      "files": [
+        "src/valencia/patterns/large-heading/KineticHeadline.tsx",
+        "src/valencia/patterns/large-heading/KineticHeadline.css",
+        "src/valencia/patterns/large-heading/index.ts"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" pattern to {{target}}.\n\nStyle: {{style}}\nEnergy: {{energy}}\nTrigger: {{when}}\n\nUse the project's existing colours, typography, and semantic HTML.\nPreserve unrelated content and layout.\nRespect reduced-motion preferences (heading must be readable without motion).\nRun the build after integrating and fix any errors."
+    },
+    {
+      "id": "text-reveal",
+      "name": "Text reveal",
+      "description": "Short lines rise into view, one after another.",
+      "goodFor": [
+        "Manifestos",
+        "Section intros",
+        "Pull quotes"
+      ],
+      "collections": [
+        "Quiet",
+        "Clear",
+        "Editorial"
+      ],
+      "styles": [
+        "quiet",
+        "clear",
+        "editorial"
+      ],
+      "status": "ready",
+      "component": "StaggerText",
+      "runtime": "dom",
+      "weight": "light",
+      "accessibility": {
+        "reducedMotion": "supported",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": false
+      },
+      "files": [
+        "src/valencia/patterns/text-reveal/StaggerText.tsx",
+        "src/valencia/patterns/text-reveal/StaggerText.css",
+        "src/valencia/patterns/text-reveal/index.ts"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" pattern to {{target}}.\n\nStyle: {{style}}\nEnergy: {{energy}}\nTrigger: {{when}}\n\nUse for short, editorial lines — not body copy.\nPreserve semantic paragraph structure.\nRespect reduced-motion preferences."
+    },
+    {
+      "id": "image-reveal",
+      "name": "Image reveal",
+      "description": "A media block that unmasks into view — vertical, horizontal, or zoom.",
+      "goodFor": [
+        "Hero images",
+        "Section covers",
+        "Editorial media"
+      ],
+      "collections": [
+        "Editorial",
+        "Quiet",
+        "Clear"
+      ],
+      "styles": [
+        "quiet",
+        "clear",
+        "editorial"
+      ],
+      "status": "ready",
+      "component": "ImageReveal",
+      "runtime": "dom",
+      "weight": "light",
+      "accessibility": {
+        "reducedMotion": "supported",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": false
+      },
+      "files": [
+        "src/valencia/patterns/image-reveal/ImageReveal.tsx",
+        "src/valencia/patterns/image-reveal/ImageReveal.css",
+        "src/valencia/patterns/image-reveal/index.ts",
+        "src/valencia/core/mask/MaskReveal.tsx",
+        "src/valencia/core/mask/MaskReveal.css"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" pattern to {{target}}.\n\nStyle: {{style}}\nEnergy: {{energy}}\nFrom: vertical | horizontal | zoom (choose the one that suits the layout)\n\nWrap the media element; do not rewrite its markup.\nEnsure the media remains visible under reduced motion (unmask completes instantly)."
+    },
+    {
+      "id": "moving-image",
+      "name": "Moving image",
+      "description": "A media block that drifts as the page scrolls — subtle, controlled depth.",
+      "goodFor": [
+        "Hero images",
+        "Section dividers",
+        "Editorial covers"
+      ],
+      "collections": [
+        "Editorial",
+        "Bold"
+      ],
+      "styles": [
+        "quiet",
+        "editorial",
+        "bold"
+      ],
+      "status": "ready",
+      "component": "ParallaxMedia",
+      "runtime": "dom",
+      "weight": "light",
+      "accessibility": {
+        "reducedMotion": "supported",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": false
+      },
+      "files": [
+        "src/valencia/patterns/moving-image/ParallaxMedia.tsx",
+        "src/valencia/patterns/moving-image/ParallaxMedia.css",
+        "src/valencia/patterns/moving-image/index.ts",
+        "src/valencia/core/parallax/Parallax.tsx",
+        "src/valencia/core/scroll/useValenciaScroll.ts"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" pattern to {{target}}.\n\nAmount: tiny | small | medium (default small — avoid loud parallax)\nStyle: {{style}}\n\nWrap the media element; do not stretch the container.\nFully disables under reduced-motion — assume it will."
+    },
+    {
+      "id": "scroll-story",
+      "name": "Scroll story",
+      "description": "A sticky media column that changes chapter as the reading column scrolls past.",
+      "goodFor": [
+        "Methodology walkthroughs",
+        "Product tours",
+        "Editorial explainers"
+      ],
+      "collections": [
+        "Editorial",
+        "Quiet"
+      ],
+      "styles": [
+        "quiet",
+        "editorial"
+      ],
+      "status": "ready",
+      "component": "StickyStory",
+      "runtime": "dom",
+      "weight": "medium",
+      "accessibility": {
+        "reducedMotion": "supported",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": false
+      },
+      "files": [
+        "src/valencia/patterns/scroll-story/StickyStory.tsx",
+        "src/valencia/patterns/scroll-story/StickyStory.css",
+        "src/valencia/patterns/scroll-story/index.ts"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" pattern to {{target}}.\n\nStyle: {{style}}\nChapters: provide 3–6 chapter objects with { title, body, media }.\n\nAssume mobile stacks the sticky media above each chapter — do not build\na bespoke small-screen layout unless the pattern's default is wrong for\nyour case.\nUnder reduced motion the media cross-fade disables; content stays present."
+    },
+    {
+      "id": "image-zoom",
+      "name": "Image zoom",
+      "description": "A media block starts contained and progressively crops toward full-bleed as you scroll.",
+      "goodFor": [
+        "Editorial covers",
+        "Statement moments",
+        "Section transitions"
+      ],
+      "collections": [
+        "Editorial",
+        "Bold"
+      ],
+      "styles": [
+        "editorial",
+        "bold"
+      ],
+      "status": "ready",
+      "component": "EditorialZoom",
+      "runtime": "dom",
+      "weight": "medium",
+      "accessibility": {
+        "reducedMotion": "supported",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": false
+      },
+      "files": [
+        "src/valencia/patterns/image-zoom/EditorialZoom.tsx",
+        "src/valencia/patterns/image-zoom/EditorialZoom.css",
+        "src/valencia/patterns/image-zoom/index.ts"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" pattern to {{target}}.\n\nStyle: {{style}}\nOptional caption: pass a short caption if useful.\n\nReserve for a single statement moment per page — not for every image.\nFully disables under reduced motion; the image stays in its inset frame."
+    },
+    {
+      "id": "shuffle",
+      "name": "Shuffle",
+      "description": "A grid whose items re-order with a fluid layout transition.",
+      "goodFor": [
+        "Case-study grids",
+        "Team pages",
+        "Playful demonstrations"
+      ],
+      "collections": [
+        "Playful",
+        "Clear"
+      ],
+      "styles": [
+        "playful",
+        "clear",
+        "bold"
+      ],
+      "status": "ready",
+      "component": "ShuffleGrid",
+      "runtime": "dom",
+      "weight": "light",
+      "accessibility": {
+        "reducedMotion": "partial",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": false
+      },
+      "files": [
+        "src/valencia/patterns/shuffle/ShuffleGrid.tsx",
+        "src/valencia/patterns/shuffle/ShuffleGrid.css",
+        "src/valencia/patterns/shuffle/index.ts",
+        "src/valencia/accessibility/reducedMotion.ts"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" pattern to {{target}}.\n\nStyle: {{style}}\nProvide items as [{ id, content }] — id is stable, content is what renders.\nShuffle uses Fisher-Yates; do not replace with sort(Math.random).\nLayout transitions disable under reduced motion; the button still shuffles."
+    },
+    {
+      "id": "marquee",
+      "name": "Marquee",
+      "description": "A horizontal loop of labels or marks — pauses on hover, static under reduced motion.",
+      "goodFor": [
+        "Section dividers",
+        "Campaign phrases",
+        "Partner marks"
+      ],
+      "collections": [
+        "Bold",
+        "Playful",
+        "Editorial"
+      ],
+      "styles": [
+        "bold",
+        "playful",
+        "editorial"
+      ],
+      "status": "ready",
+      "component": "Marquee",
+      "runtime": "dom",
+      "weight": "light",
+      "accessibility": {
+        "reducedMotion": "supported",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": true
+      },
+      "files": [
+        "src/valencia/patterns/marquee/Marquee.tsx",
+        "src/valencia/patterns/marquee/Marquee.css",
+        "src/valencia/patterns/marquee/index.ts"
+      ],
+      "packages": [],
+      "prompt": "Add Valencia's \"{{name}}\" pattern to {{target}}.\n\nSpeed: slow | normal | fast (default normal)\nDirection: left | right\n\nDuplicate the content once inside — the pattern handles the loop.\nUnder reduced motion the row is static; never rely on the animation\nto convey required information."
+    },
+    {
+      "id": "magnetic-object",
+      "name": "Magnetic object",
+      "description": "A single element that follows the cursor within a soft field.",
+      "goodFor": [
+        "Primary CTAs",
+        "Brand marks",
+        "Playful specimens"
+      ],
+      "collections": [
+        "Playful",
+        "Bold"
+      ],
+      "styles": [
+        "playful",
+        "bold"
+      ],
+      "status": "ready",
+      "component": "MagneticObject",
+      "runtime": "dom",
+      "weight": "light",
+      "accessibility": {
+        "reducedMotion": "supported",
+        "keyboard": true,
+        "hoverOnly": true,
+        "autoplay": false
+      },
+      "files": [
+        "src/valencia/patterns/magnetic-object/MagneticObject.tsx",
+        "src/valencia/patterns/magnetic-object/MagneticObject.css",
+        "src/valencia/patterns/magnetic-object/index.ts",
+        "src/valencia/core/pointer/PointerResponse.tsx",
+        "src/valencia/accessibility/reducedMotion.ts"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" pattern to {{target}}.\n\nMode: magnetic | tilt | follow | press\n\nUse sparingly — one hero button, one specimen. Not every CTA.\nDisables entirely on coarse pointers and under reduced motion."
+    },
+    {
+      "id": "expanding-panel",
+      "name": "Expanding panel",
+      "description": "A small anchor becomes a larger content surface — used for FAQs and detail reveals.",
+      "goodFor": [
+        "FAQs",
+        "Detail reveals",
+        "Navigation"
+      ],
+      "collections": [
+        "Clear",
+        "Quiet"
+      ],
+      "styles": [
+        "quiet",
+        "clear",
+        "editorial"
+      ],
+      "status": "ready",
+      "component": "ExpandingPlane",
+      "runtime": "dom",
+      "weight": "light",
+      "accessibility": {
+        "reducedMotion": "supported",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": false
+      },
+      "files": [
+        "src/valencia/patterns/expanding-panel/ExpandingPlane.tsx",
+        "src/valencia/patterns/expanding-panel/ExpandingPlane.css",
+        "src/valencia/patterns/expanding-panel/index.ts"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" pattern to {{target}}.\n\nStyle: {{style}}\nProvide items as [{ id, label, body }].\n\nAnchor button announces aria-expanded and controls the body.\nUnder reduced motion the height animation disables; the panel toggles instantly."
+    }
+  ]
+}

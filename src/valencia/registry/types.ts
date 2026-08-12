@@ -28,7 +28,7 @@ export type DesignerControls = {
   when?:   'load' | 'scroll' | 'hover' | 'click'
 }
 
-export type ValenciaPattern = {
+export type PatternMetadata = {
   id: string
   name: string
   description: string
@@ -39,7 +39,6 @@ export type ValenciaPattern = {
   isNew?: boolean
   publishedAt?: string
   component: string
-  demo: ComponentType
   prompt: string
   runtime: Runtime
   weight: Weight
@@ -52,4 +51,8 @@ export type ValenciaPattern = {
     lesson?: string
     implementation: 'clean-room'
   }
+}
+
+export type ValenciaPattern = PatternMetadata & {
+  demo: ComponentType
 }

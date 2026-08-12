@@ -4,16 +4,39 @@
 
 <h1 align="center">Valencia pattern library</h1>
 
-<p align="center">A pattern library and plugin system for Claude Code, for use across Transform.</p>
+<p align="center">Patterns for digital experiences — small, considered, useful.</p>
 
 ---
 
-Built with React, Vite, Mantine v7, and Framer Motion.
+Valencia is a React + TypeScript + Vite pattern library. The designer surface is
+five semantic motion styles (Quiet · Clear · Editorial · Bold · Playful) applied to a
+handful of Ready patterns. Each pattern generates a "Use with Claude" prompt so
+you can drop it into another project.
+
+**Stack**
+
+- React 19
+- Vite 8
+- Motion for React 12
+- TypeScript
+- React Router 7 (declarative)
+
+**Structure**
+
+- `src/valencia/core/` — 8 reusable motion primitives
+- `src/valencia/patterns/` — 10 Ready patterns (5 files each)
+- `src/valencia/styles/` — semantic motion tokens + `resolveMotion`
+- `src/valencia/theme/` — abstract theme contract; emits `--v-*` CSS variables
+- `src/valencia/registry/` — the single source of truth + generated manifest
+- `src/valencia/app/` — the designer-facing site
+- `src/legacy/` — 32 earlier UI patterns behind Mantine; lazy-loaded at `/legacy`
 
 **Sections**
-- **Patterns** — animation and UI patterns, tested in isolation
-- **Templates** — page and component templates
-- **Themes** — Claude Code themes and plugin skins
+
+- **Examples** — every Ready pattern
+- **Collections** — Quiet · Clear · Bold · Playful · Editorial · Experimental
+- **Styles** — the five motion styles, with tokens
+- **Use** — how to use Valencia with Claude Code
 
 **Running locally**
 
@@ -22,4 +45,11 @@ npm install
 npm run dev
 ```
 
-Open the URL shown in your terminal after running `npm run dev`.
+**Scripts**
+
+- `npm run dev` — Vite dev server
+- `npm run build` — regenerates the manifest, type-checks, and builds
+- `npm run test` — vitest unit tests
+- `npm run manifest` — regenerate `src/valencia/registry/valencia.manifest.json`
+
+Read `docs/VALENCIA.md` before adding or modifying patterns.

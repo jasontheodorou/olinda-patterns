@@ -1,7 +1,6 @@
-import type { ValenciaPattern } from '../../registry/types'
-import { MagneticObjectDemo } from './MagneticObject.demo'
+import type { PatternMetadata } from '../../registry/types'
 
-export const metadata: ValenciaPattern = {
+export const metadata: PatternMetadata = {
   id: 'magnetic-object',
   name: 'Magnetic object',
   description: 'A single element that follows the cursor within a soft field.',
@@ -10,7 +9,6 @@ export const metadata: ValenciaPattern = {
   styles: ['playful', 'bold'],
   status: 'ready',
   component: 'MagneticObject',
-  demo: MagneticObjectDemo,
   prompt:
 `Add Valencia's "{{name}}" pattern to {{target}}.
 

@@ -1,7 +1,6 @@
-import type { ValenciaPattern } from '../../registry/types'
-import { MarqueeDemo } from './Marquee.demo'
+import type { PatternMetadata } from '../../registry/types'
 
-export const metadata: ValenciaPattern = {
+export const metadata: PatternMetadata = {
   id: 'marquee',
   name: 'Marquee',
   description: 'A horizontal loop of labels or marks — pauses on hover, static under reduced motion.',
@@ -10,7 +9,6 @@ export const metadata: ValenciaPattern = {
   styles: ['bold', 'playful', 'editorial'],
   status: 'ready',
   component: 'Marquee',
-  demo: MarqueeDemo,
   prompt:
 `Add Valencia's "{{name}}" pattern to {{target}}.
 

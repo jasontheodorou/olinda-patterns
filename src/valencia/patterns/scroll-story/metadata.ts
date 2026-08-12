@@ -1,7 +1,6 @@
-import type { ValenciaPattern } from '../../registry/types'
-import { StickyStoryDemo } from './StickyStory.demo'
+import type { PatternMetadata } from '../../registry/types'
 
-export const metadata: ValenciaPattern = {
+export const metadata: PatternMetadata = {
   id: 'scroll-story',
   name: 'Scroll story',
   description: 'A sticky media column that changes chapter as the reading column scrolls past.',
@@ -10,7 +9,6 @@ export const metadata: ValenciaPattern = {
   styles: ['quiet', 'editorial'],
   status: 'ready',
   component: 'StickyStory',
-  demo: StickyStoryDemo,
   prompt:
 `Add Valencia's "{{name}}" pattern to {{target}}.
 

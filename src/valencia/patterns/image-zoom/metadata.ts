@@ -1,7 +1,6 @@
-import type { ValenciaPattern } from '../../registry/types'
-import { EditorialZoomDemo } from './EditorialZoom.demo'
+import type { PatternMetadata } from '../../registry/types'
 
-export const metadata: ValenciaPattern = {
+export const metadata: PatternMetadata = {
   id: 'image-zoom',
   name: 'Image zoom',
   description: 'A media block starts contained and progressively crops toward full-bleed as you scroll.',
@@ -10,7 +9,6 @@ export const metadata: ValenciaPattern = {
   styles: ['editorial', 'bold'],
   status: 'ready',
   component: 'EditorialZoom',
-  demo: EditorialZoomDemo,
   prompt:
 `Add Valencia's "{{name}}" pattern to {{target}}.
 

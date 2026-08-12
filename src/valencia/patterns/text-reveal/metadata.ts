@@ -1,7 +1,6 @@
-import type { ValenciaPattern } from '../../registry/types'
-import { StaggerTextDemo } from './StaggerText.demo'
+import type { PatternMetadata } from '../../registry/types'
 
-export const metadata: ValenciaPattern = {
+export const metadata: PatternMetadata = {
   id: 'text-reveal',
   name: 'Text reveal',
   description: 'Short lines rise into view, one after another.',
@@ -10,7 +9,6 @@ export const metadata: ValenciaPattern = {
   styles: ['quiet', 'clear', 'editorial'],
   status: 'ready',
   component: 'StaggerText',
-  demo: StaggerTextDemo,
   prompt:
 `Add Valencia's "{{name}}" pattern to {{target}}.
 

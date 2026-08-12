@@ -1,7 +1,6 @@
-import type { ValenciaPattern } from '../../registry/types'
-import { ExpandingPlaneDemo } from './ExpandingPlane.demo'
+import type { PatternMetadata } from '../../registry/types'
 
-export const metadata: ValenciaPattern = {
+export const metadata: PatternMetadata = {
   id: 'expanding-panel',
   name: 'Expanding panel',
   description: 'A small anchor becomes a larger content surface — used for FAQs and detail reveals.',
@@ -10,7 +9,6 @@ export const metadata: ValenciaPattern = {
   styles: ['quiet', 'clear', 'editorial'],
   status: 'ready',
   component: 'ExpandingPlane',
-  demo: ExpandingPlaneDemo,
   prompt:
 `Add Valencia's "{{name}}" pattern to {{target}}.
 

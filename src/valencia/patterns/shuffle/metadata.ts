@@ -1,7 +1,6 @@
-import type { ValenciaPattern } from '../../registry/types'
-import { ShuffleGridDemo } from './ShuffleGrid.demo'
+import type { PatternMetadata } from '../../registry/types'
 
-export const metadata: ValenciaPattern = {
+export const metadata: PatternMetadata = {
   id: 'shuffle',
   name: 'Shuffle',
   description: 'A grid whose items re-order with a fluid layout transition.',
@@ -10,7 +9,6 @@ export const metadata: ValenciaPattern = {
   styles: ['playful', 'clear', 'bold'],
   status: 'ready',
   component: 'ShuffleGrid',
-  demo: ShuffleGridDemo,
   prompt:
 `Add Valencia's "{{name}}" pattern to {{target}}.
 

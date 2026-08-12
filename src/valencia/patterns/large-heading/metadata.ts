@@ -1,7 +1,6 @@
-import type { ValenciaPattern } from '../../registry/types'
-import { KineticHeadlineDemo } from './KineticHeadline.demo'
+import type { PatternMetadata } from '../../registry/types'
 
-export const metadata: ValenciaPattern = {
+export const metadata: PatternMetadata = {
   id: 'large-heading',
   name: 'Large heading',
   description: 'A large heading that reveals word-by-word behind a soft mask.',
@@ -10,7 +9,6 @@ export const metadata: ValenciaPattern = {
   styles: ['quiet', 'editorial', 'bold'],
   status: 'ready',
   component: 'KineticHeadline',
-  demo: KineticHeadlineDemo,
   prompt:
 `Add Valencia's "{{name}}" pattern to {{target}}.
 

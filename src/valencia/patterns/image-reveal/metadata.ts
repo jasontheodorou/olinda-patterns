@@ -1,7 +1,6 @@
-import type { ValenciaPattern } from '../../registry/types'
-import { ImageRevealDemo } from './ImageReveal.demo'
+import type { PatternMetadata } from '../../registry/types'
 
-export const metadata: ValenciaPattern = {
+export const metadata: PatternMetadata = {
   id: 'image-reveal',
   name: 'Image reveal',
   description: 'A media block that unmasks into view — vertical, horizontal, or zoom.',
@@ -10,7 +9,6 @@ export const metadata: ValenciaPattern = {
   styles: ['quiet', 'clear', 'editorial'],
   status: 'ready',
   component: 'ImageReveal',
-  demo: ImageRevealDemo,
   prompt:
 `Add Valencia's "{{name}}" pattern to {{target}}.
 

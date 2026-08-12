@@ -1,7 +1,6 @@
-import type { ValenciaPattern } from '../../registry/types'
-import { ParallaxMediaDemo } from './ParallaxMedia.demo'
+import type { PatternMetadata } from '../../registry/types'
 
-export const metadata: ValenciaPattern = {
+export const metadata: PatternMetadata = {
   id: 'moving-image',
   name: 'Moving image',
   description: 'A media block that drifts as the page scrolls — subtle, controlled depth.',
@@ -10,7 +9,6 @@ export const metadata: ValenciaPattern = {
   styles: ['quiet', 'editorial', 'bold'],
   status: 'ready',
   component: 'ParallaxMedia',
-  demo: ParallaxMediaDemo,
   prompt:
 `Add Valencia's "{{name}}" pattern to {{target}}.
 

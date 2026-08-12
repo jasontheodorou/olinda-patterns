@@ -6,7 +6,8 @@ dist/
 .DS_Store
 .idea/
 .vscode/
-.claude/
+.claude/*
+!.claude/settings.json
 *.log
 .cache/
 journal/
