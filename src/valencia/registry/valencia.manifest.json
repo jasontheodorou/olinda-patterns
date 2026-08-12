@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T15:13:03.256Z",
+  "generatedAt": "2026-08-12T15:16:10.045Z",
   "patterns": [
     {
       "id": "large-heading",
@@ -387,6 +387,331 @@
         "motion"
       ],
       "prompt": "Add Valencia's \"{{name}}\" pattern to {{target}}.\n\nStyle: {{style}}\nProvide items as [{ id, label, body }].\n\nAnchor button announces aria-expanded and controls the body.\nUnder reduced motion the height animation disables; the panel toggles instantly."
+    },
+    {
+      "id": "chaos-grid",
+      "name": "Chaos grid",
+      "description": "Pieces of work sit in a loose scatter, then compose into a grid on demand.",
+      "goodFor": [
+        "Case-study collages",
+        "Process illustrations",
+        "Playful hero moments"
+      ],
+      "collections": [
+        "Experimental",
+        "Playful"
+      ],
+      "styles": [
+        "playful",
+        "clear"
+      ],
+      "status": "experimental",
+      "component": "ChaosGridComposer",
+      "runtime": "dom",
+      "weight": "medium",
+      "accessibility": {
+        "reducedMotion": "partial",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": false
+      },
+      "files": [
+        "src/experimental/editorial-motion/patterns/chaos-grid/index.tsx",
+        "src/experimental/editorial-motion/studio.css"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" experimental pattern to {{target}}.\n\nThis is bespoke — not a lightweight primitive. Copy the source folder\nand adapt content, not motion mechanics.\nUnder reduced motion the pieces settle into their grid without animation."
+    },
+    {
+      "id": "content-constellation",
+      "name": "Content constellation",
+      "description": "A cluster of ideas floats loosely, then aligns into a legible arrangement.",
+      "goodFor": [
+        "Concept mapping",
+        "Editorial dashboards",
+        "Introductory sections"
+      ],
+      "collections": [
+        "Experimental",
+        "Editorial"
+      ],
+      "styles": [
+        "editorial",
+        "playful"
+      ],
+      "status": "experimental",
+      "component": "ContentConstellation",
+      "runtime": "dom",
+      "weight": "medium",
+      "accessibility": {
+        "reducedMotion": "partial",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": false
+      },
+      "files": [
+        "src/experimental/editorial-motion/patterns/content-constellation/index.tsx",
+        "src/experimental/editorial-motion/studio.css"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" experimental pattern to {{target}}.\n\nBespoke — copy the source folder and adapt content. Reduced motion collapses\nto the aligned state."
+    },
+    {
+      "id": "easing-playground",
+      "name": "Easing playground",
+      "description": "An interactive editor for cubic-bezier and spring curves, comparing timings side by side.",
+      "goodFor": [
+        "Team workshops",
+        "Motion documentation",
+        "Design system pages"
+      ],
+      "collections": [
+        "Experimental"
+      ],
+      "styles": [
+        "clear",
+        "playful"
+      ],
+      "status": "experimental",
+      "component": "EasingPlayground",
+      "runtime": "dom",
+      "weight": "medium",
+      "accessibility": {
+        "reducedMotion": "partial",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": false
+      },
+      "files": [
+        "src/experimental/editorial-motion/patterns/easing-playground/index.tsx",
+        "src/experimental/editorial-motion/studio.css"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" experimental pattern to {{target}}.\n\nInteractive documentation — the curves are the content. Best used as a page,\nnot embedded inside other layouts."
+    },
+    {
+      "id": "editorial-zoom-experimental",
+      "name": "Editorial zoom (experimental)",
+      "description": "An earlier take on the image-zoom idea — different composition, kept for reference.",
+      "goodFor": [
+        "Editorial covers",
+        "Reference"
+      ],
+      "collections": [
+        "Experimental",
+        "Editorial"
+      ],
+      "styles": [
+        "editorial"
+      ],
+      "status": "experimental",
+      "component": "EditorialZoom",
+      "runtime": "dom",
+      "weight": "medium",
+      "accessibility": {
+        "reducedMotion": "partial",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": false
+      },
+      "files": [
+        "src/experimental/editorial-motion/patterns/editorial-zoom/index.tsx",
+        "src/experimental/editorial-motion/studio.css"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" experimental pattern to {{target}}.\n\nPrefer the Ready pattern \"Image zoom\" for new work — this is retained for\nreference and comparison."
+    },
+    {
+      "id": "living-footnotes",
+      "name": "Living footnotes",
+      "description": "Marginalia annotate a text and animate into view as their referent is read.",
+      "goodFor": [
+        "Long-form articles",
+        "Academic writing",
+        "Editorial explainers"
+      ],
+      "collections": [
+        "Experimental",
+        "Editorial"
+      ],
+      "styles": [
+        "editorial",
+        "quiet"
+      ],
+      "status": "experimental",
+      "component": "LivingFootnotes",
+      "runtime": "dom",
+      "weight": "medium",
+      "accessibility": {
+        "reducedMotion": "supported",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": false
+      },
+      "files": [
+        "src/experimental/editorial-motion/patterns/living-footnotes/index.tsx",
+        "src/experimental/editorial-motion/studio.css"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" experimental pattern to {{target}}.\n\nAttach footnote content by reference; the pattern handles reveal on scroll.\nEnsure notes remain accessible (as regular footnotes) with motion off."
+    },
+    {
+      "id": "meaning-machine",
+      "name": "Meaning machine",
+      "description": "A word swaps for its neighbours in place, changing the meaning of a sentence.",
+      "goodFor": [
+        "Statement pages",
+        "Manifestos",
+        "Concept demonstrations"
+      ],
+      "collections": [
+        "Experimental",
+        "Playful",
+        "Editorial"
+      ],
+      "styles": [
+        "playful",
+        "editorial"
+      ],
+      "status": "experimental",
+      "component": "MeaningMachine",
+      "runtime": "dom",
+      "weight": "light",
+      "accessibility": {
+        "reducedMotion": "partial",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": true
+      },
+      "files": [
+        "src/experimental/editorial-motion/patterns/meaning-machine/index.tsx",
+        "src/experimental/editorial-motion/studio.css"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" experimental pattern to {{target}}.\n\nProvide a base sentence with a slot, plus a list of substitutions.\nThe full sentence must remain readable under reduced motion."
+    },
+    {
+      "id": "scroll-editorial-story",
+      "name": "Scroll editorial story",
+      "description": "A four-chapter scroll composition with live controls and persistent iteration history.",
+      "goodFor": [
+        "Methodology showcases",
+        "Editorial explainers",
+        "Motion-first landing sections"
+      ],
+      "collections": [
+        "Experimental",
+        "Editorial"
+      ],
+      "styles": [
+        "editorial",
+        "bold"
+      ],
+      "status": "experimental",
+      "component": "ScrollEditorialStoryDemo",
+      "runtime": "dom",
+      "weight": "heavy",
+      "accessibility": {
+        "reducedMotion": "partial",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": false
+      },
+      "files": [
+        "src/experimental/editorial-motion/patterns/scroll-editorial-story/ScrollEditorialStory.tsx",
+        "src/experimental/editorial-motion/patterns/scroll-editorial-story/ScrollEditorialStoryDemo.tsx",
+        "src/experimental/editorial-motion/patterns/scroll-editorial-story/scroll-editorial-story.css",
+        "src/experimental/editorial-motion/patterns/scroll-editorial-story/types.ts",
+        "src/experimental/editorial-motion/patterns/scroll-editorial-story/useIterationLog.ts"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" experimental pattern to {{target}}.\n\nThis is a full page-level experience — do not embed inside dense layouts.\nIteration log persists via localStorage; consider disabling it in embedded contexts."
+    },
+    {
+      "id": "shuffle-glossary",
+      "name": "Shuffle glossary",
+      "description": "A glossary whose terms shuffle into new adjacencies, hinting at fresh connections.",
+      "goodFor": [
+        "Concept explorers",
+        "Reference material with tone"
+      ],
+      "collections": [
+        "Experimental",
+        "Playful"
+      ],
+      "styles": [
+        "playful",
+        "clear"
+      ],
+      "status": "experimental",
+      "component": "ShuffleGlossary",
+      "runtime": "dom",
+      "weight": "light",
+      "accessibility": {
+        "reducedMotion": "partial",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": false
+      },
+      "files": [
+        "src/experimental/editorial-motion/patterns/shuffle-glossary/index.tsx",
+        "src/experimental/editorial-motion/studio.css"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" experimental pattern to {{target}}.\n\nShuffle uses Fisher-Yates; the terms stay sortable via the button.\nContent must be independently addressable — treat animation as decorative."
+    },
+    {
+      "id": "thought-unfolding",
+      "name": "Thought unfolding",
+      "description": "An idea reveals itself in layers as the reader progresses.",
+      "goodFor": [
+        "Thoughtpieces",
+        "Long-form arguments",
+        "Editorial covers"
+      ],
+      "collections": [
+        "Experimental",
+        "Editorial",
+        "Quiet"
+      ],
+      "styles": [
+        "editorial",
+        "quiet"
+      ],
+      "status": "experimental",
+      "component": "ThoughtUnfolding",
+      "runtime": "dom",
+      "weight": "medium",
+      "accessibility": {
+        "reducedMotion": "partial",
+        "keyboard": true,
+        "hoverOnly": false,
+        "autoplay": false
+      },
+      "files": [
+        "src/experimental/editorial-motion/patterns/thought-unfolding/index.tsx",
+        "src/experimental/editorial-motion/studio.css"
+      ],
+      "packages": [
+        "motion"
+      ],
+      "prompt": "Add Valencia's \"{{name}}\" experimental pattern to {{target}}.\n\nBest as a stand-alone hero section on a long article.\nUnder reduced motion the layers land immediately, in the same order."
     }
   ]
 }
