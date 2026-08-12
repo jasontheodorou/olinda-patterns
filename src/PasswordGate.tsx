@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Box, Stack, Text } from '@mantine/core'
 import { C, font } from './tokens'
 
 const PASSWORD = import.meta.env.VITE_GATE_PASSWORD as string | undefined
@@ -25,24 +24,27 @@ export function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
   }
 
   return (
-    <Box style={{
+    <div style={{
       minHeight: '100vh', background: C.bg,
       display: 'flex', alignItems: 'center', justifyContent: 'center',
     }}>
-      <Stack gap={24} style={{ width: '100%', maxWidth: 360, padding: '0 24px', alignItems: 'center' }}>
+      <div style={{
+        display: 'flex', flexDirection: 'column', gap: 24,
+        width: '100%', maxWidth: 360, padding: '0 24px', alignItems: 'center',
+      }}>
 
         <img src="/orange.svg" alt="Valencia" style={{ width: 72, height: 72 }} />
 
-        <Stack gap={4} style={{ textAlign: 'center' }}>
-          <Text style={{ fontSize: 20, fontWeight: 700, color: C.ink, fontFamily: font }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 4, textAlign: 'center' }}>
+          <div style={{ fontSize: 20, fontWeight: 700, color: C.ink, fontFamily: font }}>
             Valencia pattern library
-          </Text>
-          <Text style={{ fontSize: 14, color: C.dark, fontFamily: font }}>
+          </div>
+          <div style={{ fontSize: 14, color: C.dark, fontFamily: font }}>
             Transform UK — internal use only
-          </Text>
-        </Stack>
+          </div>
+        </div>
 
-        <Stack gap={8} style={{ width: '100%' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, width: '100%' }}>
           <input
             type="password"
             placeholder="Password"
@@ -58,9 +60,9 @@ export function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
             }}
           />
           {error && (
-            <Text style={{ fontSize: 13, color: '#C0392B', fontFamily: font }}>
+            <div style={{ fontSize: 13, color: '#C0392B', fontFamily: font }}>
               Incorrect password.
-            </Text>
+            </div>
           )}
           <button
             onClick={attempt}
@@ -72,9 +74,9 @@ export function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
           >
             Enter
           </button>
-        </Stack>
+        </div>
 
-      </Stack>
-    </Box>
+      </div>
+    </div>
   )
 }

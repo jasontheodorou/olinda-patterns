@@ -1,14 +1,17 @@
-import { StrictMode } from 'react'
+import { StrictMode, useState } from 'react'
 import { createRoot } from 'react-dom/client'
-import { MantineProvider } from '@mantine/core'
-import { transformTheme } from './theme'
+import { PasswordGate, isGateOpen } from './PasswordGate'
+import { AppRouter } from './AppRouter'
 import './index.css'
-import App from './App.tsx'
+
+function Root() {
+  const [unlocked, setUnlocked] = useState(() => isGateOpen())
+  if (!unlocked) return <PasswordGate onUnlock={() => setUnlocked(true)} />
+  return <AppRouter />
+}
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <MantineProvider theme={transformTheme} defaultColorScheme="light">
-      <App />
-    </MantineProvider>
+    <Root />
   </StrictMode>,
 )
