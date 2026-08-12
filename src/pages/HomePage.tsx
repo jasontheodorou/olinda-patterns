@@ -1,5 +1,5 @@
 import { Box, Container, SimpleGrid, Stack, Text } from '@mantine/core'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import { C, font } from '../tokens'
 import { PATTERNS } from '../patterns'
 
