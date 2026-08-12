@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 import { MotionConfig } from 'motion/react'
 import { ValenciaThemeProvider } from './valencia/theme/ValenciaThemeProvider'
 import { defaultTheme } from './valencia/theme/defaultTheme'
+import { SiteChrome } from './valencia/app/components/SiteChrome'
 import { HomePage } from './valencia/app/pages/HomePage'
 import { ExamplesPage } from './valencia/app/pages/ExamplesPage'
 import { PatternPage } from './valencia/app/pages/PatternPage'
@@ -18,7 +19,7 @@ function ValenciaLayout({ children }: { children: React.ReactNode }) {
   return (
     <ValenciaThemeProvider theme={defaultTheme}>
       <MotionConfig reducedMotion="user">
-        {children}
+        <SiteChrome>{children}</SiteChrome>
       </MotionConfig>
     </ValenciaThemeProvider>
   )

@@ -1,0 +1,105 @@
+.v-home {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 var(--v-space-page);
+}
+
+.v-home__hero {
+  padding: clamp(48px, 8vw, 96px) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 900px;
+}
+
+.v-home__lede {
+  margin: 0;
+  font-family: var(--v-font-body);
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.55;
+  color: var(--v-muted);
+  max-width: 60ch;
+}
+
+.v-home__ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.v-home__cta {
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-family: var(--v-font-body);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--v-text);
+  border: 1px solid var(--v-text);
+  transition: transform 150ms ease, background 150ms ease;
+}
+
+.v-home__cta:hover { transform: translateY(-1px); }
+
+.v-home__cta--primary {
+  background: var(--v-text);
+  color: var(--v-surface);
+}
+
+.v-home__section {
+  padding: 48px 0;
+}
+
+.v-home__section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 24px;
+}
+
+.v-home__section-title {
+  margin: 0;
+  font-family: var(--v-font-display);
+  font-size: clamp(20px, 2.4vw, 28px);
+  font-weight: 700;
+  color: var(--v-text);
+  letter-spacing: -0.01em;
+}
+
+.v-home__section-more {
+  font-family: var(--v-font-body);
+  font-size: 14px;
+  color: var(--v-muted);
+  text-decoration: none;
+}
+
+.v-home__section-more:hover { color: var(--v-text); }
+
+.v-home__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.v-home__collections {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.v-home__collection {
+  padding: 24px 20px;
+  background: var(--v-surface);
+  border-radius: var(--v-radius-md);
+  font-family: var(--v-font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--v-text);
+  text-decoration: none;
+  transition: transform 150ms ease;
+}
+
+.v-home__collection:hover {
+  transform: translateY(-2px);
+}

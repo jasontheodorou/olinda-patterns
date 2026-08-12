@@ -1,0 +1,113 @@
+.v-styles {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 48px var(--v-space-page);
+}
+
+.v-styles__head { margin-bottom: 32px; max-width: 720px; }
+
+.v-styles__title {
+  margin: 0 0 12px;
+  font-family: var(--v-font-display);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  color: var(--v-text);
+  letter-spacing: -0.02em;
+}
+
+.v-styles__lede {
+  margin: 0;
+  font-family: var(--v-font-body);
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--v-muted);
+}
+
+.v-styles__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.v-styles__card {
+  padding: 24px;
+  background: var(--v-surface);
+  border-radius: var(--v-radius-md);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 150ms ease;
+}
+
+.v-styles__card:hover { transform: translateY(-2px); }
+
+.v-styles__card-name {
+  font-family: var(--v-font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--v-text);
+}
+
+.v-styles__card-desc {
+  font-family: var(--v-font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--v-muted);
+}
+
+.v-styles__card-nums {
+  margin-top: auto;
+  font-family: var(--v-font-mono);
+  font-size: 12px;
+  color: var(--v-muted);
+  padding-top: 8px;
+}
+
+.v-styles__crumb {
+  font-family: var(--v-font-body);
+  font-size: 13px;
+  color: var(--v-muted);
+  margin-bottom: 16px;
+}
+
+.v-styles__crumb a { color: var(--v-primary); text-decoration: none; }
+
+.v-styles__preview {
+  padding: 96px 0;
+  min-height: 400px;
+  display: grid;
+  place-items: center;
+}
+
+.v-styles__tokens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  margin: 0;
+}
+
+.v-styles__tokens > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.v-styles__tokens dt {
+  font-family: var(--v-font-body);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--v-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.v-styles__tokens dd {
+  margin: 0;
+  font-family: var(--v-font-mono);
+  font-size: 15px;
+  color: var(--v-text);
+}

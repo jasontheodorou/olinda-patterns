@@ -1,0 +1,56 @@
+.v-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background: var(--v-surface);
+  border-radius: var(--v-radius-md);
+}
+
+.v-controls__group {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.v-controls__legend {
+  font-family: var(--v-font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--v-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.v-controls__row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.v-controls__chip {
+  padding: 8px 14px;
+  background: var(--v-bg);
+  color: var(--v-text);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-family: var(--v-font-body);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.v-controls__chip:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.v-controls__chip--active {
+  background: var(--v-text);
+  color: var(--v-surface);
+}
