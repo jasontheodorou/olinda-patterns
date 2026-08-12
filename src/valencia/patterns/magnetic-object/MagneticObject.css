@@ -1,0 +1,17 @@
+.v-mag {
+  display: inline-block;
+}
+
+.v-mag-demo {
+  display: inline-block;
+  padding: 20px 40px;
+  background: var(--v-text);
+  color: var(--v-surface);
+  font-family: var(--v-font-display);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
+}

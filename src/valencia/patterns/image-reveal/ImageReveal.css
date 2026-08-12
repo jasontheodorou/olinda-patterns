@@ -1,0 +1,12 @@
+.v-image-reveal-demo {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, var(--v-primary) 0%, var(--v-accent) 100%);
+  display: grid;
+  place-items: center;
+  color: var(--v-surface);
+  font-family: var(--v-font-display);
+  font-size: clamp(24px, 3vw, 44px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}

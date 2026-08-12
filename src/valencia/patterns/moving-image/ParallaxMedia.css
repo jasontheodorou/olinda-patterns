@@ -1,0 +1,11 @@
+.v-parallax-demo {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  background: linear-gradient(200deg, var(--v-muted) 0%, var(--v-primary) 60%, var(--v-accent) 100%);
+  display: grid;
+  place-items: center;
+  color: var(--v-surface);
+  font-family: var(--v-font-display);
+  font-size: clamp(24px, 3vw, 40px);
+  font-weight: 600;
+}
