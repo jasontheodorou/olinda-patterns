@@ -1,6 +1,8 @@
 import { lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router'
 import { MotionConfig } from 'motion/react'
+import { ValenciaThemeProvider } from './valencia/theme/ValenciaThemeProvider'
+import { defaultTheme } from './valencia/theme/defaultTheme'
 import { HomePage } from './valencia/app/pages/HomePage'
 import { ExamplesPage } from './valencia/app/pages/ExamplesPage'
 import { PatternPage } from './valencia/app/pages/PatternPage'
@@ -11,6 +13,16 @@ import { AboutPage } from './valencia/app/pages/AboutPage'
 import { NotFoundPage } from './valencia/app/pages/NotFoundPage'
 
 const LegacyShell = lazy(() => import('./legacy'))
+
+function ValenciaLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <ValenciaThemeProvider theme={defaultTheme}>
+      <MotionConfig reducedMotion="user">
+        {children}
+      </MotionConfig>
+    </ValenciaThemeProvider>
+  )
+}
 
 function LegacyFallback() {
   return (
@@ -26,27 +38,25 @@ function LegacyFallback() {
 export function AppRouter() {
   return (
     <BrowserRouter>
-      <MotionConfig reducedMotion="user">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/examples" element={<ExamplesPage />} />
-          <Route path="/examples/:patternId" element={<PatternPage />} />
-          <Route path="/collections/:collectionId" element={<CollectionPage />} />
-          <Route path="/styles" element={<StylesPage />} />
-          <Route path="/styles/:styleId" element={<StylesPage />} />
-          <Route path="/use" element={<UsePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route
-            path="/legacy/*"
-            element={
-              <Suspense fallback={<LegacyFallback />}>
-                <LegacyShell />
-              </Suspense>
-            }
-          />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </MotionConfig>
+      <Routes>
+        <Route path="/" element={<ValenciaLayout><HomePage /></ValenciaLayout>} />
+        <Route path="/examples" element={<ValenciaLayout><ExamplesPage /></ValenciaLayout>} />
+        <Route path="/examples/:patternId" element={<ValenciaLayout><PatternPage /></ValenciaLayout>} />
+        <Route path="/collections/:collectionId" element={<ValenciaLayout><CollectionPage /></ValenciaLayout>} />
+        <Route path="/styles" element={<ValenciaLayout><StylesPage /></ValenciaLayout>} />
+        <Route path="/styles/:styleId" element={<ValenciaLayout><StylesPage /></ValenciaLayout>} />
+        <Route path="/use" element={<ValenciaLayout><UsePage /></ValenciaLayout>} />
+        <Route path="/about" element={<ValenciaLayout><AboutPage /></ValenciaLayout>} />
+        <Route
+          path="/legacy/*"
+          element={
+            <Suspense fallback={<LegacyFallback />}>
+              <LegacyShell />
+            </Suspense>
+          }
+        />
+        <Route path="*" element={<ValenciaLayout><NotFoundPage /></ValenciaLayout>} />
+      </Routes>
     </BrowserRouter>
   )
 }
