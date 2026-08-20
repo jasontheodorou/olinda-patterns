@@ -1,6 +1,6 @@
+import { motion } from 'motion/react'
 import { Link, useParams } from 'react-router'
 import { motionStyles, type ValenciaStyle } from '../../styles/motionStyles'
-import { KineticHeadline } from '../../patterns/large-heading/KineticHeadline'
 import './StylesPage.css'
 
 const STYLES: { id: ValenciaStyle; name: string; description: string }[] = [
@@ -19,19 +19,24 @@ export function StylesPage() {
     return (
       <div className="v-styles v-styles--detail">
         <div className="v-styles__crumb">
-          <Link to="/build2/styles">Styles</Link> · {active.name}
+          <Link to="/styles">Styles</Link> · {active.name}
         </div>
         <h1 className="v-styles__title">{active.name}</h1>
         <p className="v-styles__lede">{active.description}</p>
 
         <section className="v-styles__preview">
-          <KineticHeadline
+          <motion.h2
             key={active.id}
-            text="A large heading, in this style."
-            style={active.id}
-            energy="medium"
-            when="load"
-          />
+            initial={{ opacity: 0, y: motionStyles[active.id].distance }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: motionStyles[active.id].duration,
+              ease: motionStyles[active.id].ease,
+            }}
+            className="v-styles__preview-headline"
+          >
+            A large heading, in this style.
+          </motion.h2>
         </section>
 
         <dl className="v-styles__tokens">
@@ -55,7 +60,7 @@ export function StylesPage() {
 
       <div className="v-styles__grid">
         {STYLES.map(s => (
-          <Link key={s.id} to={`/build2/styles/${s.id}`} className="v-styles__card">
+          <Link key={s.id} to={`/styles/${s.id}`} className="v-styles__card">
             <div className="v-styles__card-name">{s.name}</div>
             <div className="v-styles__card-desc">{s.description}</div>
             <div className="v-styles__card-nums">

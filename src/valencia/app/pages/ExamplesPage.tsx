@@ -10,13 +10,17 @@ export function ExamplesPage() {
       <header className="v-examples__head">
         <h1 className="v-examples__title">Examples</h1>
         <p className="v-examples__lede">
-          {ready.length} live patterns. Pick one to explore, adjust the controls, and generate a Claude prompt.
+          {ready.length === 0
+            ? 'No patterns yet. This is the shell.'
+            : `${ready.length} live patterns. Pick one to explore, adjust the controls, and generate a Claude prompt.`}
         </p>
       </header>
 
-      <div className="v-examples__grid">
-        {ready.map(p => <PatternCard key={p.id} pattern={p} />)}
-      </div>
+      {ready.length > 0 && (
+        <div className="v-examples__grid">
+          {ready.map(p => <PatternCard key={p.id} pattern={p} />)}
+        </div>
+      )}
     </div>
   )
 }

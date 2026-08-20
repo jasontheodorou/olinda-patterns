@@ -21,7 +21,7 @@ export function PatternPage() {
   if (!pattern) {
     return (
       <div className="v-pp">
-        <p className="v-pp__missing">Pattern not found. <Link to="/build2/examples">Back to examples</Link></p>
+        <p className="v-pp__missing">Pattern not found. <Link to="/examples">Back to examples</Link></p>
       </div>
     )
   }
@@ -32,7 +32,7 @@ export function PatternPage() {
     <div className="v-pp">
 
       <div className="v-pp__breadcrumb">
-        <Link to="/build2/examples">Examples</Link>
+        <Link to="/examples">Examples</Link>
         <span> · </span>
         <span>{pattern.name}</span>
       </div>
@@ -68,7 +68,7 @@ export function PatternPage() {
             <ul className="v-pp__meta-list v-pp__meta-list--pills">
               {pattern.collections.map(c => (
                 <li key={c}>
-                  <Link to={`/build2/collections/${c.toLowerCase()}`}>{c}</Link>
+                  <Link to={`/collections/${c.toLowerCase()}`}>{c}</Link>
                 </li>
               ))}
             </ul>
