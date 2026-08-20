@@ -5,15 +5,16 @@
 }
 
 .v-chrome__header {
-  background: var(--v-primary);
-  color: var(--v-surface);
+  background: var(--v-surface);
+  color: var(--v-text);
   position: sticky;
   top: 0;
   z-index: 20;
+  border-bottom: 1px solid rgba(15, 15, 15, 0.06);
 }
 
 .v-chrome__row {
-  max-width: 1180px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 14px var(--v-space-page);
   display: flex;
@@ -26,9 +27,9 @@
   font-family: var(--v-font-display);
   font-size: 20px;
   font-weight: 700;
-  color: var(--v-surface);
+  color: var(--v-text);
   text-decoration: none;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .v-chrome__nav {
@@ -40,27 +41,27 @@
 .v-chrome__link {
   padding: 8px 14px;
   font-family: var(--v-font-body);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--v-muted);
   text-decoration: none;
   border-radius: 999px;
   transition: color 180ms ease, background 180ms ease;
 }
 
 .v-chrome__link:hover {
-  color: var(--v-surface);
-  background: rgba(255, 255, 255, 0.12);
+  color: var(--v-text);
+  background: var(--v-bg);
 }
 
 .v-chrome__link--active {
-  color: var(--v-primary);
-  background: var(--v-surface);
+  color: var(--v-surface);
+  background: var(--v-text);
 }
 
 .v-chrome__link--active:hover {
-  color: var(--v-primary);
-  background: var(--v-surface);
+  color: var(--v-surface);
+  background: var(--v-text);
 }
 
 .v-chrome__main {
@@ -68,8 +69,8 @@
 }
 
 .v-chrome__footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-  padding: 24px 0;
+  border-top: 1px solid rgba(15, 15, 15, 0.06);
+  padding: 32px 0;
   background: var(--v-bg);
 }
 

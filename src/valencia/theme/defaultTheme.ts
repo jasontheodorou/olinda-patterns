@@ -2,12 +2,12 @@ import type { ValenciaTheme } from './contract'
 
 export const defaultTheme: ValenciaTheme = {
   colour: {
-    background: '#F4F4EF',
+    background: '#F6F2F5',
     surface:    '#FFFFFF',
-    text:       '#101010',
-    muted:      '#6B6B6B',
-    primary:    '#2946FF',
-    accent:     '#FF5A3C',
+    text:       '#0F0F0F',
+    muted:      '#5C5C5C',
+    primary:    '#EA6D2C',
+    accent:     '#5040E3',
   },
   type: {
     display: "'Inter', arial, sans-serif",
@@ -15,9 +15,9 @@ export const defaultTheme: ValenciaTheme = {
     mono:    "ui-monospace, 'SF Mono', Menlo, Monaco, monospace",
   },
   radius: {
-    small:  4,
-    medium: 10,
-    large:  20,
+    small:  6,
+    medium: 14,
+    large:  28,
   },
   spacing: {
     page:    'clamp(24px, 4vw, 48px)',
