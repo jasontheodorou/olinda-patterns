@@ -20,7 +20,7 @@ export function CollectionPage() {
     return (
       <div className="v-coll">
         <p className="v-coll__missing">
-          Unknown collection. <Link to="/examples">Back to examples</Link>
+          Unknown collection. <Link to="/build2/examples">Back to examples</Link>
         </p>
       </div>
     )
@@ -32,7 +32,7 @@ export function CollectionPage() {
     <div className="v-coll">
       <header className="v-coll__head">
         <div className="v-coll__crumb">
-          <Link to="/examples">Examples</Link> · Collections
+          <Link to="/build2/examples">Examples</Link> · Collections
         </div>
         <h1 className="v-coll__title">{collection}</h1>
         <p className="v-coll__lede">{items.length} pattern{items.length === 1 ? '' : 's'} in this collection.</p>
@@ -44,7 +44,7 @@ export function CollectionPage() {
 
       <nav className="v-coll__sibs" aria-label="Other collections">
         {COLLECTIONS.filter(c => c !== collection).map(c => (
-          <Link key={c} to={`/collections/${c.toLowerCase()}`} className="v-coll__sib">{c}</Link>
+          <Link key={c} to={`/build2/collections/${c.toLowerCase()}`} className="v-coll__sib">{c}</Link>
         ))}
       </nav>
     </div>

@@ -35,7 +35,7 @@ Read @docs/v2-build-pack/05_CLAUDE_CODE_BUILD_BRIEF.md for the V2 brief, @docs/v
 **Cross-cutting rules:**
 
 - Never remove `framer-motion` from `package.json` until `grep -r "framer-motion" src` returns empty.
-- Never mount `MantineProvider` or import `@mantine/core/styles.css` above the legacy route boundary — Mantine and the 32 legacy patterns must only ship when the user hits `/legacy/*`.
+- Never mount `MantineProvider` or import `@mantine/core/styles.css` above the legacy route boundary — Mantine and the 32 legacy patterns must only ship when the user hits `/build1/*`.
 - `useMotionTemplate` at component scope only — never inside a JSX `style={{ }}` literal.
 - Shuffles use Fisher-Yates with an injectable RNG; never `sort(() => Math.random() - 0.5)`.
 - `<MotionConfig reducedMotion="user">` wraps the V2 subtree; use `useReducedMotion()` only for per-pattern full-disable behaviour.

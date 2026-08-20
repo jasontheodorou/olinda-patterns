@@ -5,7 +5,7 @@ import './PatternCard.css'
 export function PatternCard({ pattern }: { pattern: ValenciaPattern }) {
   const Demo = pattern.demo
   return (
-    <Link to={`/examples/${pattern.id}`} className="v-card">
+    <Link to={`/build2/examples/${pattern.id}`} className="v-card">
       <div className="v-card__preview" aria-hidden="true">
         <div className="v-card__demo">
           <Demo />

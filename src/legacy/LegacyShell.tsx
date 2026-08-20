@@ -13,22 +13,22 @@ import { PATTERNS } from '../patterns'
 type LegacySection = 'home' | 'patterns' | 'templates' | 'themes'
 
 function sectionFor(pathname: string): LegacySection {
-  if (pathname.startsWith('/legacy/templates')) return 'templates'
-  if (pathname.startsWith('/legacy/themes')) return 'themes'
-  if (pathname.startsWith('/legacy/patterns')) return 'patterns'
-  if (pathname === '/legacy' || pathname === '/legacy/') return 'home'
+  if (pathname.startsWith('/build1/templates')) return 'templates'
+  if (pathname.startsWith('/build1/themes')) return 'themes'
+  if (pathname.startsWith('/build1/patterns')) return 'patterns'
+  if (pathname === '/build1' || pathname === '/build1/') return 'home'
   return 'patterns'
 }
 
 function useLegacyNavigate() {
   const navigate = useNavigate()
   return useCallback((id: string) => {
-    if (id === 'home') return navigate('/legacy')
-    if (id === 'patterns') return navigate('/legacy/patterns')
-    if (id === 'templates') return navigate('/legacy/templates')
-    if (id === 'themes') return navigate('/legacy/themes')
-    if (PATTERNS.find(p => p.id === id)) return navigate(`/legacy/${id}`)
-    navigate('/legacy')
+    if (id === 'home') return navigate('/build1')
+    if (id === 'patterns') return navigate('/build1/patterns')
+    if (id === 'templates') return navigate('/build1/templates')
+    if (id === 'themes') return navigate('/build1/themes')
+    if (PATTERNS.find(p => p.id === id)) return navigate(`/build1/${id}`)
+    navigate('/build1')
   }, [navigate])
 }
 
@@ -55,8 +55,8 @@ function LegacyLayout({ children }: { children: React.ReactNode }) {
   const currentSection = sectionFor(window.location.pathname)
   return (
     <Layout currentSection={currentSection} onNavigate={(id) => {
-      if (id === 'home') return navigate('/legacy')
-      navigate(`/legacy/${id}`)
+      if (id === 'home') return navigate('/build1')
+      navigate(`/build1/${id}`)
     }}>
       {children}
     </Layout>

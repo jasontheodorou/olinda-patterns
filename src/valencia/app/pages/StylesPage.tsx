@@ -19,7 +19,7 @@ export function StylesPage() {
     return (
       <div className="v-styles v-styles--detail">
         <div className="v-styles__crumb">
-          <Link to="/styles">Styles</Link> · {active.name}
+          <Link to="/build2/styles">Styles</Link> · {active.name}
         </div>
         <h1 className="v-styles__title">{active.name}</h1>
         <p className="v-styles__lede">{active.description}</p>
@@ -55,7 +55,7 @@ export function StylesPage() {
 
       <div className="v-styles__grid">
         {STYLES.map(s => (
-          <Link key={s.id} to={`/styles/${s.id}`} className="v-styles__card">
+          <Link key={s.id} to={`/build2/styles/${s.id}`} className="v-styles__card">
             <div className="v-styles__card-name">{s.name}</div>
             <div className="v-styles__card-desc">{s.description}</div>
             <div className="v-styles__card-nums">

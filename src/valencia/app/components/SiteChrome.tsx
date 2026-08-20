@@ -14,7 +14,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
     <div className="v-chrome">
       <header className="v-chrome__header">
         <div className="v-chrome__row">
-          <Link to="/" className="v-chrome__brand">Valencia</Link>
+          <Link to="/build2" className="v-chrome__brand">Valencia</Link>
           <nav className="v-chrome__nav" aria-label="Primary">
             {NAV.map(item => (
               <NavLink

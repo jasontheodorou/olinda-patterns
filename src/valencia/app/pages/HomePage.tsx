@@ -23,15 +23,15 @@ export function HomePage() {
           A small pattern library for public-sector design work. Motion where it means something. Restraint where it doesn&apos;t.
         </p>
         <div className="v-home__ctas">
-          <Link to="/examples" className="v-home__cta v-home__cta--primary">Browse examples</Link>
-          <Link to="/use" className="v-home__cta">How it works</Link>
+          <Link to="/build2/examples" className="v-home__cta v-home__cta--primary">Browse examples</Link>
+          <Link to="/build2/use" className="v-home__cta">How it works</Link>
         </div>
       </section>
 
       <section className="v-home__section">
         <div className="v-home__section-head">
           <h2 className="v-home__section-title">Featured</h2>
-          <Link to="/examples" className="v-home__section-more">See all →</Link>
+          <Link to="/build2/examples" className="v-home__section-more">See all →</Link>
         </div>
         <div className="v-home__grid">
           {featured.map(p => <PatternCard key={p.id} pattern={p} />)}
@@ -49,7 +49,7 @@ export function HomePage() {
             { id: 'editorial',  label: 'Editorial' },
             { id: 'experimental', label: 'Experimental' },
           ].map(c => (
-            <Link key={c.id} to={`/collections/${c.id}`} className="v-home__collection">
+            <Link key={c.id} to={`/build2/collections/${c.id}`} className="v-home__collection">
               {c.label}
             </Link>
           ))}

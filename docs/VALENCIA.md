@@ -12,7 +12,7 @@ A React + TypeScript + Vite + Motion for React pattern library. It ships:
 - An **abstract theme contract** in `src/valencia/theme/` — every pattern reads `--v-*` CSS variables.
 - A **single registry** in `src/valencia/registry/patterns.ts` from which the site, collections, prompts, and manifest are derived.
 - A **generated manifest** at `src/valencia/registry/valencia.manifest.json` (do not hand-edit).
-- A **legacy chunk** at `/legacy` containing 32 earlier UI patterns behind Mantine — lazy-loaded, unlinked from primary nav.
+- A **legacy chunk** at `/build1` containing 32 earlier UI patterns behind Mantine — lazy-loaded, unlinked from primary nav.
 
 ## Folder layout
 
@@ -35,7 +35,7 @@ src/valencia/
 
 These are the rules that keep the library coherent:
 
-1. **Never mount `MantineProvider` or import `@mantine/core/styles.css`** above the legacy route boundary. Mantine only ships when a user hits `/legacy/*`.
+1. **Never mount `MantineProvider` or import `@mantine/core/styles.css`** above the legacy route boundary. Mantine only ships when a user hits `/build1/*`.
 2. **`useMotionTemplate` at component scope only** — never inside a JSX `style={{ }}` literal. Assign to a `const` first.
 3. **Shuffle uses Fisher-Yates** with an injectable RNG — `fisherYatesShuffle` in `src/valencia/accessibility/reducedMotion.ts`. Never `sort(() => Math.random() - 0.5)`.
 4. **Reduced motion is baseline**. The V2 subtree is wrapped in `<MotionConfig reducedMotion="user">`. Individual patterns must still surface content when motion is off — call `useReducedMotion()` when transform-only fallback is not enough.
@@ -125,7 +125,7 @@ The primary distribution mode is **source-copy via Claude**:
 
 ## Legacy
 
-`/legacy/*` renders the previous 32 UI patterns behind `LegacyShell.tsx`, which imports `MantineProvider`, `@mantine/core/styles.css`, and the old registry. It is `React.lazy`'d in `src/AppRouter.tsx` and unlinked from primary nav. Do not import from `src/legacy/*` anywhere in the V2 tree.
+`/build1/*` renders the previous 32 UI patterns behind `LegacyShell.tsx`, which imports `MantineProvider`, `@mantine/core/styles.css`, and the old registry. It is `React.lazy`'d in `src/AppRouter.tsx` and unlinked from primary nav. Do not import from `src/build1/*` anywhere in the V2 tree.
 
 ## Testing
 

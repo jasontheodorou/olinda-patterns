@@ -3,13 +3,13 @@ import AxeBuilder from '@axe-core/playwright'
 
 const AXE_ROUTES = [
   '/',
-  '/examples',
-  '/examples/large-heading',
-  '/examples/expanding-panel',
-  '/collections/quiet',
-  '/styles/editorial',
-  '/use',
-  '/about',
+  '/build2/examples',
+  '/build2/examples/large-heading',
+  '/build2/examples/expanding-panel',
+  '/build2/collections/quiet',
+  '/build2/styles/editorial',
+  '/build2/use',
+  '/build2/about',
 ]
 
 for (const route of AXE_ROUTES) {

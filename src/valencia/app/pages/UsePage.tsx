@@ -14,7 +14,7 @@ export function UsePage() {
       <ol className="v-use__steps">
         <li>
           <h3>Find a pattern that fits</h3>
-          <p>Browse <a href="/examples">Examples</a> or start from a <a href="/collections/quiet">collection</a>. Every entry has a live demo.</p>
+          <p>Browse <a href="/build2/examples">Examples</a> or start from a <a href="/build2/collections/quiet">collection</a>. Every entry has a live demo.</p>
         </li>
         <li>
           <h3>Adjust the controls</h3>

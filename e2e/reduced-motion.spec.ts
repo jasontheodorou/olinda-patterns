@@ -17,7 +17,7 @@ const READY_IDS = [
 
 for (const id of READY_IDS) {
   test(`Ready pattern "${id}" shows content under reduced motion`, async ({ page }) => {
-    await page.goto(`/examples/${id}`)
+    await page.goto(`/build2/examples/${id}`)
     await expect(page.locator('h1')).toBeVisible()
     const demo = page.locator('.v-pp__demo')
     await expect(demo).toBeVisible()
