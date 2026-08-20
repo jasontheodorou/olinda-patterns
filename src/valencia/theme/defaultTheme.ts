@@ -2,12 +2,12 @@ import type { ValenciaTheme } from './contract'
 
 export const defaultTheme: ValenciaTheme = {
   colour: {
-    background: '#F6F2F5',
+    background: '#F1F0E4',
     surface:    '#FFFFFF',
-    text:       '#0F0F0F',
-    muted:      '#5C5C5C',
-    primary:    '#EA6D2C',
-    accent:     '#5040E3',
+    text:       '#1A1F14',
+    muted:      '#5F6350',
+    primary:    '#4A5A32',
+    accent:     '#C9A54A',
   },
   type: {
     display: "'Inter', arial, sans-serif",

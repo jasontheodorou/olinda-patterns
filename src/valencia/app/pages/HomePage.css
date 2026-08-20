@@ -1,11 +1,14 @@
 .v-home {
-  --art-orange:    #EA6D2C;
-  --art-orange-2:  #F19D5A;
-  --art-indigo:    #5040E3;
-  --art-indigo-2:  #B8B0F5;
-  --art-olive:     #33341A;
-  --art-mauve:     #EEE7ED;
-  --art-blush:     #F7E4E4;
+  --art-forest:     #2E3520;
+  --art-moss:       #4A5A32;
+  --art-sage:       #7A8452;
+  --art-sage-light: #A8B380;
+  --art-sage-pale:  #D6DDBA;
+  --art-cream:      #E4E8D3;
+  --art-ochre:      #C9A54A;
+  --art-clay:       #A47A4E;
+  --tile-bg:        #E5E8CF;
+  --tile-bg-hover:  #DBDFC0;
 
   max-width: 1400px;
   margin: 0 auto;
@@ -55,7 +58,7 @@
 }
 
 .v-chapter__text {
-  background: var(--art-mauve);
+  background: var(--tile-bg);
   border-radius: var(--v-radius-lg);
   padding: clamp(28px, 4vw, 56px);
   color: var(--v-text);
@@ -69,7 +72,7 @@
 
 .v-chapter__text:hover {
   transform: translateY(-2px);
-  background: #EADFE8;
+  background: var(--tile-bg-hover);
 }
 
 .v-chapter__inner {
@@ -124,117 +127,117 @@
   display: block;
 }
 
-/* Quiet — soft mauve + faint blush blobs */
+/* Quiet — pale sage blobs on cream */
 .v-chapter__art--quiet {
-  background: var(--art-blush);
+  background: var(--art-cream);
 }
 .v-art-shape--soft-a {
   inset: 20% -10% 20% 30%;
-  background: #EFC7C0;
+  background: var(--art-sage-pale);
   border-radius: 50%;
-  filter: blur(0.5px);
 }
 .v-art-shape--soft-b {
   inset: 40% 30% 15% 8%;
-  background: #F3D7CE;
+  background: var(--art-sage-light);
   border-radius: 45% 55% 60% 40% / 55% 40% 60% 45%;
+  opacity: 0.85;
 }
 
 /* Clear — geometric split */
 .v-chapter__art--clear {
-  background: #E6E4EA;
+  background: var(--art-cream);
 }
 .v-art-shape--grid-a {
   inset: 0 50% 0 0;
-  background: var(--v-text);
+  background: var(--art-forest);
 }
 .v-art-shape--grid-b {
   inset: 15% 12% 55% 58%;
-  background: var(--art-orange);
+  background: var(--art-ochre);
   border-radius: 12px;
 }
 .v-art-shape--grid-c {
   inset: 55% 55% 12% 58%;
-  background: var(--art-indigo);
+  background: var(--art-moss);
   border-radius: 12px;
 }
 
-/* Bold — dominant orange with dark olive slice */
+/* Bold — dominant moss with forest slice */
 .v-chapter__art--bold {
-  background: var(--art-orange-2);
+  background: var(--art-sage);
 }
 .v-art-shape--bold-a {
   inset: -5% 30% -5% -5%;
-  background: var(--art-orange);
+  background: var(--art-moss);
   border-radius: 55% 45% 50% 50% / 60% 55% 45% 40%;
 }
 .v-art-shape--bold-b {
   inset: 0 0 0 62%;
-  background: var(--art-olive);
+  background: var(--art-forest);
 }
 
-/* Playful — multi-shape composition */
+/* Playful — sage circles on forest bg */
 .v-chapter__art--playful {
-  background: var(--art-olive);
+  background: var(--art-forest);
 }
 .v-art-shape--play-a {
   top: -20%; right: -10%;
   width: 60%; aspect-ratio: 1;
-  background: var(--art-indigo);
+  background: var(--art-sage);
   border-radius: 50%;
 }
 .v-art-shape--play-b {
   bottom: -25%; left: -10%;
   width: 55%; aspect-ratio: 1;
-  background: var(--art-indigo);
+  background: var(--art-sage-light);
   border-radius: 50%;
 }
 .v-art-shape--play-c {
   top: 35%; left: 20%;
   width: 22%; aspect-ratio: 1;
-  background: var(--art-orange);
+  background: var(--art-ochre);
   border-radius: 50%;
 }
 .v-art-shape--play-d {
   top: 10%; right: 30%;
   width: 14%; aspect-ratio: 1;
-  background: var(--art-orange);
+  background: var(--art-cream);
   border-radius: 50%;
 }
 
-/* Editorial — bold indigo composition */
+/* Editorial — moss composition with ochre wedge */
 .v-chapter__art--editorial {
-  background: var(--art-indigo);
+  background: var(--art-moss);
 }
 .v-art-shape--ed-a {
   inset: -5% -5% 45% 45%;
-  background: var(--art-orange);
+  background: var(--art-ochre);
   border-radius: 0 var(--v-radius-lg) 0 40%;
 }
 .v-art-shape--ed-b {
   inset: 55% 25% -5% -5%;
-  background: var(--art-indigo-2);
+  background: var(--art-sage-light);
   border-radius: 0 40% var(--v-radius-lg) 0;
 }
 
-/* Experimental — layered swirl */
+/* Experimental — layered organic swirl in olive tones */
 .v-chapter__art--experimental {
-  background: #2A2B14;
+  background: var(--art-forest);
 }
 .v-art-shape--xp-a {
   inset: -20% 20% 20% -10%;
-  background: var(--art-orange);
+  background: var(--art-moss);
   border-radius: 42% 58% 55% 45% / 60% 40% 60% 40%;
 }
 .v-art-shape--xp-b {
   inset: 25% -15% -20% 30%;
-  background: var(--art-indigo);
+  background: var(--art-sage);
   border-radius: 60% 40% 55% 45% / 50% 55% 45% 50%;
 }
 .v-art-shape--xp-c {
   top: 35%; left: 40%;
   width: 26%; aspect-ratio: 1;
-  background: #B24AA6;
+  background: var(--art-clay);
   border-radius: 50%;
 }
 
