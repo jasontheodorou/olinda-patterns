@@ -9,42 +9,12 @@ type Chapter = {
 }
 
 const CHAPTERS: Chapter[] = [
-  {
-    id: 'quiet',
-    label: 'Quiet',
-    description: 'Barely-there motion for calm surfaces and long reads. Content settles. Nothing shouts.',
-    art: 'quiet',
-  },
-  {
-    id: 'clear',
-    label: 'Clear',
-    description: 'Direct and functional. For task interfaces, dashboards, and dense screens that need to work fast.',
-    art: 'clear',
-  },
-  {
-    id: 'bold',
-    label: 'Bold',
-    description: 'Louder distance, more weight. For declarative headlines and one-statement moments.',
-    art: 'bold',
-  },
-  {
-    id: 'playful',
-    label: 'Playful',
-    description: 'Springy and light. For lighter marketing touches, campaign pages, and the occasional surprise.',
-    art: 'playful',
-  },
-  {
-    id: 'editorial',
-    label: 'Editorial',
-    description: 'Slower rhythm, longer arcs. For story-led pages, thoughtpieces, and long-form work.',
-    art: 'editorial',
-  },
-  {
-    id: 'experimental',
-    label: 'Experimental',
-    description: 'Ideas in progress. Motion that is still being figured out — kept in the open for feedback.',
-    art: 'experimental',
-  },
+  { id: 'quiet',        label: 'Quiet',        description: 'Barely-there motion for calm surfaces and long reads.',                 art: 'quiet' },
+  { id: 'clear',        label: 'Clear',        description: 'Direct and functional. For task interfaces and dashboards.',            art: 'clear' },
+  { id: 'bold',         label: 'Bold',         description: 'Louder distance, more weight. For declarative headlines.',              art: 'bold' },
+  { id: 'playful',      label: 'Playful',      description: 'Springy and light. For lighter marketing touches and campaign pages.',  art: 'playful' },
+  { id: 'editorial',    label: 'Editorial',    description: 'Slower rhythm, longer arcs. For story-led pages and long-form work.',   art: 'editorial' },
+  { id: 'experimental', label: 'Experimental', description: 'Ideas in progress. Motion still being figured out.',                    art: 'experimental' },
 ]
 
 export function HomePage() {
@@ -62,18 +32,15 @@ export function HomePage() {
 
       <section className="v-home__chapters">
         {CHAPTERS.map((c) => (
-          <article className="v-chapter" key={c.id}>
-            <Link to={`/collections/${c.id}`} className="v-chapter__text">
-              <div className="v-chapter__inner">
-                <h2 className="v-chapter__title">{c.label}</h2>
-                <p className="v-chapter__desc">{c.description}</p>
-              </div>
-              <div className="v-chapter__arrow" aria-hidden="true">→</div>
-            </Link>
+          <Link to={`/collections/${c.id}`} className="v-chapter" key={c.id}>
             <div className={`v-chapter__art v-chapter__art--${c.art}`} aria-hidden="true">
               <ChapterArt variant={c.art} />
             </div>
-          </article>
+            <div className="v-chapter__caption">
+              <h2 className="v-chapter__title">{c.label}</h2>
+              <p className="v-chapter__desc">{c.description}</p>
+            </div>
+          </Link>
         ))}
       </section>
 
