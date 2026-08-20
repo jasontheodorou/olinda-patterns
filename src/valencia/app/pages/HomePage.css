@@ -37,14 +37,20 @@
   text-decoration: none;
   color: var(--v-text);
   border: 1px solid var(--v-text);
-  transition: transform 150ms ease, background 150ms ease;
+  transition: transform 150ms ease, background 150ms ease, color 150ms ease, border-color 150ms ease;
 }
 
 .v-home__cta:hover { transform: translateY(-1px); }
 
 .v-home__cta--primary {
-  background: var(--v-text);
+  background: var(--v-primary);
   color: var(--v-surface);
+  border-color: var(--v-primary);
+}
+
+.v-home__cta--primary:hover {
+  background: var(--v-text);
+  border-color: var(--v-text);
 }
 
 .v-home__section {
@@ -97,9 +103,12 @@
   font-weight: 600;
   color: var(--v-text);
   text-decoration: none;
-  transition: transform 150ms ease;
+  transition: transform 150ms ease, color 150ms ease, box-shadow 200ms ease;
+  border: 1px solid transparent;
 }
 
 .v-home__collection:hover {
   transform: translateY(-2px);
+  color: var(--v-primary);
+  box-shadow: 0 6px 20px rgba(41, 70, 255, 0.08);
 }

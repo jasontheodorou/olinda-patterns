@@ -15,7 +15,6 @@ export function HomePage() {
     <div className="v-home">
 
       <section className="v-home__hero">
-        <p className="v-home__kicker">Valencia</p>
         <h1 className="v-home__title">Patterns for digital experiences.</h1>
         <p className="v-home__lede">
           A small pattern library for public-sector design work. Motion where it means something. Restraint where it doesn&apos;t.
