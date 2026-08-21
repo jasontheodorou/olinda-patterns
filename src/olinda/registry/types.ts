@@ -53,6 +53,13 @@ export type PatternMetadata = {
   }
 }
 
+export type DemoProps = {
+  playKey?: number
+  style?:   OlindaStyle
+  energy?:  OlindaEnergy
+  speed?:   OlindaSpeed
+}
+
 export type OlindaPattern = PatternMetadata & {
-  demo: ComponentType
+  demo: ComponentType<DemoProps>
 }

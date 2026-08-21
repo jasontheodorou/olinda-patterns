@@ -7,6 +7,10 @@ import { DeveloperDetails } from '../components/DeveloperDetails'
 import type { DesignerControls } from '../../registry/types'
 import './PatternPage.css'
 
+function collectionSlug(collections: string[]): string {
+  return (collections[0] ?? 'Clear').toLowerCase()
+}
+
 export function PatternPage() {
   const { patternId } = useParams()
   const pattern = PATTERNS.find(p => p.id === patternId)
@@ -15,74 +19,74 @@ export function PatternPage() {
     style: pattern?.styles[0],
     energy: 'medium',
     speed: 'normal',
-    when: 'scroll',
+    when: 'load',
   })
+  const [playKey, setPlayKey] = useState(0)
 
   if (!pattern) {
     return (
       <div className="o-pp">
-        <p className="o-pp__missing">Pattern not found. <Link to="/examples">Back to examples</Link></p>
+        <p className="o-pp__missing">
+          Pattern not found. <Link to="/examples">Back to patterns</Link>
+        </p>
       </div>
     )
   }
 
   const Demo = pattern.demo
+  const collection = collectionSlug(pattern.collections)
 
   return (
     <div className="o-pp">
 
-      <div className="o-pp__breadcrumb">
-        <Link to="/examples">Examples</Link>
-        <span> · </span>
+      <nav className="o-pp__crumb" aria-label="Breadcrumb">
+        <Link to={`/collections/${collection}`}>{pattern.collections[0]}</Link>
+        <span aria-hidden="true"> / </span>
         <span>{pattern.name}</span>
+      </nav>
+
+      <div className={`o-pp__canvas o-pp__canvas--${collection}`}>
+        <Demo
+          playKey={playKey}
+          style={controls.style}
+          energy={controls.energy}
+          speed={controls.speed}
+        />
+        <button
+          type="button"
+          className="o-pp__play"
+          onClick={() => setPlayKey(k => k + 1)}
+        >
+          <span aria-hidden="true">▶</span> Play again
+        </button>
       </div>
-
-      <header className="o-pp__head">
-        <h1 className="o-pp__title">{pattern.name}</h1>
-        <p className="o-pp__desc">{pattern.description}</p>
-      </header>
-
-      <section className="o-pp__demo">
-        <Demo />
-      </section>
 
       <div className="o-pp__body">
 
-        <div className="o-pp__meta">
-          <div>
-            <h3 className="o-pp__meta-title">Good for</h3>
-            <ul className="o-pp__meta-list">
-              {pattern.goodFor.map(g => <li key={g}>{g}</li>)}
-            </ul>
-          </div>
+        <header className="o-pp__head">
+          <h1 className="o-pp__title">{pattern.name}</h1>
+          <p className="o-pp__desc">{pattern.description}</p>
+        </header>
 
-          <div>
-            <h3 className="o-pp__meta-title">Styles</h3>
-            <ul className="o-pp__meta-list o-pp__meta-list--pills">
-              {pattern.styles.map(s => <li key={s}>{s}</li>)}
-            </ul>
-          </div>
+        <section className="o-pp__section">
+          <h2 className="o-pp__section-title">Use for</h2>
+          <ul className="o-pp__list">
+            {pattern.goodFor.map(g => <li key={g}>{g}</li>)}
+          </ul>
+        </section>
 
-          <div>
-            <h3 className="o-pp__meta-title">Collections</h3>
-            <ul className="o-pp__meta-list o-pp__meta-list--pills">
-              {pattern.collections.map(c => (
-                <li key={c}>
-                  <Link to={`/collections/${c.toLowerCase()}`}>{c}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div className="o-pp__try">
-          <h3 className="o-pp__try-title">Try it</h3>
+        <section className="o-pp__section">
+          <h2 className="o-pp__section-title">Try it</h2>
           <Controls pattern={pattern} value={controls} onChange={setControls} />
-        </div>
+        </section>
 
-        <div className="o-pp__use">
+        <section className="o-pp__section o-pp__section--use">
+          <h2 className="o-pp__section-title">Use in your project</h2>
+          <p className="o-pp__use-lede">
+            Copy the prompt and paste it into Claude Code in your project. Claude will read your theme and adapt the pattern to fit.
+          </p>
           <UseWithClaude pattern={pattern} controls={controls} />
-        </div>
+        </section>
 
         <DeveloperDetails pattern={pattern} />
       </div>

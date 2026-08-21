@@ -1,3 +1,7 @@
 import type { OlindaPattern } from './types'
 
-export const PATTERNS: OlindaPattern[] = []
+import { pattern as reveal } from '../patterns/reveal'
+
+export const PATTERNS: OlindaPattern[] = [
+  reveal,
+]
