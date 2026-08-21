@@ -23,10 +23,10 @@
 .v-home__title {
   margin: 0 0 24px;
   font-family: var(--v-font-display);
-  font-size: clamp(56px, 10vw, 144px);
+  font-size: clamp(44px, 7vw, 96px);
   font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: -0.045em;
+  line-height: 1;
+  letter-spacing: -0.035em;
   color: var(--v-text);
 }
 
