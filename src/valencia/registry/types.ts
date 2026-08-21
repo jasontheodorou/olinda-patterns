@@ -10,7 +10,7 @@ export type ValenciaTrigger = 'mount' | 'inView' | 'scroll' | 'hover' | 'press'
 export type Runtime = 'dom' | 'rive' | 'canvas'
 export type Weight  = 'light' | 'medium' | 'heavy'
 
-export const COLLECTIONS = ['Quiet', 'Clear', 'Bold', 'Playful', 'Editorial', 'Experimental'] as const
+export const COLLECTIONS = ['Clear', 'Editorial', 'Experimental'] as const
 export type Collection = typeof COLLECTIONS[number]
 
 export type AccessibilityMeta = {

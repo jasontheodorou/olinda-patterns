@@ -56,7 +56,7 @@ Every pattern's `metadata.ts` exports a `ValenciaPattern` conforming to `src/val
 | `name` | Designer-facing plain-English name. |
 | `description` | One sentence, no jargon. |
 | `goodFor` | 2–4 short usage hints. |
-| `collections` | Any of `Quiet`, `Clear`, `Bold`, `Playful`, `Editorial`, `Experimental`. |
+| `collections` | Any of `Clear`, `Editorial`, `Experimental`. |
 | `styles` | Which of the five motion styles the pattern supports. |
 | `status` | `draft` \| `experimental` \| `ready`. |
 | `component` | Internal component name (`KineticHeadline`, etc.). |

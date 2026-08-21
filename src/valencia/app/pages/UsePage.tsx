@@ -14,11 +14,11 @@ export function UsePage() {
       <ol className="v-use__steps">
         <li>
           <h3>Find a pattern that fits</h3>
-          <p>Browse <a href="/examples">Examples</a> or start from a <a href="/collections/quiet">collection</a>. Every entry has a live demo.</p>
+          <p>Browse <a href="/examples">Patterns</a> or start from a <a href="/collections/clear">collection</a>. Every entry has a live demo.</p>
         </li>
         <li>
           <h3>Adjust the controls</h3>
-          <p>Pick a style (Quiet · Clear · Editorial · Bold · Playful), an energy, and a speed. Watch the demo update.</p>
+          <p>Pick a collection (Clear · Editorial · Experimental), an energy, and a speed. Watch the demo update.</p>
         </li>
         <li>
           <h3>Copy the prompt</h3>

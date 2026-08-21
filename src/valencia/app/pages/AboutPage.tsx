@@ -14,8 +14,8 @@ export function AboutPage() {
           project — with the confidence that motion is applied only where it means something.
         </p>
         <p>
-          The library is opinionated about restraint. It ships five semantic motion styles
-          (Quiet, Clear, Editorial, Bold, Playful) and a handful of composed patterns.
+          The library is opinionated about restraint. It ships three collections —
+          Clear, Editorial, Experimental — and a handful of composed patterns.
           It does not want to be your component framework.
         </p>
         <p>
