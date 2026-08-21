@@ -2,11 +2,10 @@ import { NavLink, Link } from 'react-router'
 import './SiteChrome.css'
 
 const NAV = [
-  { to: '/examples',    label: 'Examples' },
+  { to: '/examples',              label: 'Patterns' },
   { to: '/collections/editorial', label: 'Collections' },
-  { to: '/styles',      label: 'Styles' },
-  { to: '/use',         label: 'Use' },
-  { to: '/about',       label: 'About' },
+  { to: '/use',                   label: 'Use' },
+  { to: '/about',                 label: 'About' },
 ]
 
 export function SiteChrome({ children }: { children: React.ReactNode }) {
@@ -33,7 +32,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
 
       <footer className="v-chrome__footer">
         <div className="v-chrome__row">
-          <span className="v-chrome__muted">Valencia · Patterns for digital experiences</span>
+          <span className="v-chrome__muted">Valencia · Reusable patterns for everyone</span>
         </div>
       </footer>
     </div>

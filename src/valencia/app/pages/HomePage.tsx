@@ -23,7 +23,7 @@ export function HomePage() {
 
       <section className="v-home__hero">
         <h1 className="v-home__title">
-          reusable patterns<br />for everyone :)
+          reusable patterns<br />for everyone
         </h1>
         <p className="v-home__lede">
           A small pattern library for public-sector design work. Motion where it means something. Restraint where it doesn&apos;t.
