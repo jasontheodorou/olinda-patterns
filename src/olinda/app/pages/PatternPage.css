@@ -1,0 +1,119 @@
+.o-pp {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 32px var(--o-space-page) 96px;
+}
+
+.o-pp__breadcrumb {
+  font-family: var(--o-font-body);
+  font-size: 13px;
+  color: var(--o-muted);
+  margin-bottom: 16px;
+}
+
+.o-pp__breadcrumb a {
+  color: var(--o-primary);
+  text-decoration: none;
+}
+
+.o-pp__breadcrumb a:hover { color: var(--o-text); }
+
+.o-pp__head {
+  max-width: 720px;
+  margin-bottom: 24px;
+}
+
+.o-pp__title {
+  margin: 0 0 12px;
+  font-family: var(--o-font-display);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  color: var(--o-text);
+  letter-spacing: -0.02em;
+}
+
+.o-pp__desc {
+  margin: 0;
+  font-family: var(--o-font-body);
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--o-muted);
+}
+
+.o-pp__demo {
+  background: var(--o-surface);
+  border-radius: var(--o-radius-lg);
+  overflow: hidden;
+  margin-bottom: 48px;
+  min-height: 320px;
+}
+
+.o-pp__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.o-pp__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  grid-column: 1 / -1;
+}
+
+.o-pp__meta-title {
+  margin: 0 0 8px;
+  font-family: var(--o-font-body);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--o-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.o-pp__meta-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-family: var(--o-font-body);
+  font-size: 14px;
+  color: var(--o-text);
+}
+
+.o-pp__meta-list--pills li {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--o-surface);
+  text-transform: capitalize;
+}
+
+.o-pp__meta-list--pills a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.o-pp__try, .o-pp__use { display: flex; flex-direction: column; gap: 12px; }
+
+.o-pp__try-title {
+  margin: 0;
+  font-family: var(--o-font-body);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--o-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.o-pp__missing {
+  font-family: var(--o-font-body);
+  color: var(--o-muted);
+  padding: 96px 0;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .o-pp__body { grid-template-columns: 1fr; }
+}

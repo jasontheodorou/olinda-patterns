@@ -2,11 +2,11 @@
 import { writeFileSync, mkdirSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { PATTERN_METADATA } from '../src/tarocco/registry/metadata'
+import { PATTERN_METADATA } from '../src/olinda/registry/metadata'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const repoRoot = resolve(__dirname, '..')
-const outPath = resolve(repoRoot, 'src/tarocco/registry/tarocco.manifest.json')
+const outPath = resolve(repoRoot, 'src/olinda/registry/olinda.manifest.json')
 
 const manifest = {
   version: 1,
@@ -33,4 +33,4 @@ mkdirSync(dirname(outPath), { recursive: true })
 writeFileSync(outPath, JSON.stringify(manifest, null, 2))
 
 const count = manifest.patterns.length
-console.log(`tarocco.manifest.json — ${count} patterns → ${outPath}`)
+console.log(`olinda.manifest.json — ${count} patterns → ${outPath}`)

@@ -1,29 +1,29 @@
 import { lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router'
 import { MotionConfig } from 'motion/react'
-import { TaroccoThemeProvider } from './tarocco/theme/TaroccoThemeProvider'
-import { defaultTheme } from './tarocco/theme/defaultTheme'
-import { SiteChrome } from './tarocco/app/components/SiteChrome'
-import { HomePage } from './tarocco/app/pages/HomePage'
-import { ExamplesPage } from './tarocco/app/pages/ExamplesPage'
-import { PatternPage } from './tarocco/app/pages/PatternPage'
-import { CollectionPage } from './tarocco/app/pages/CollectionPage'
-import { StylesPage } from './tarocco/app/pages/StylesPage'
-import { UsePage } from './tarocco/app/pages/UsePage'
-import { AboutPage } from './tarocco/app/pages/AboutPage'
-import { NotFoundPage } from './tarocco/app/pages/NotFoundPage'
+import { OlindaThemeProvider } from './olinda/theme/OlindaThemeProvider'
+import { defaultTheme } from './olinda/theme/defaultTheme'
+import { SiteChrome } from './olinda/app/components/SiteChrome'
+import { HomePage } from './olinda/app/pages/HomePage'
+import { ExamplesPage } from './olinda/app/pages/ExamplesPage'
+import { PatternPage } from './olinda/app/pages/PatternPage'
+import { CollectionPage } from './olinda/app/pages/CollectionPage'
+import { StylesPage } from './olinda/app/pages/StylesPage'
+import { UsePage } from './olinda/app/pages/UsePage'
+import { AboutPage } from './olinda/app/pages/AboutPage'
+import { NotFoundPage } from './olinda/app/pages/NotFoundPage'
 
 const LegacyShell = lazy(() => import('./legacy'))
 
-function TaroccoLayout() {
+function OlindaLayout() {
   return (
-    <TaroccoThemeProvider theme={defaultTheme}>
+    <OlindaThemeProvider theme={defaultTheme}>
       <MotionConfig reducedMotion="user">
         <SiteChrome>
           <Outlet />
         </SiteChrome>
       </MotionConfig>
-    </TaroccoThemeProvider>
+    </OlindaThemeProvider>
   )
 }
 
@@ -51,7 +51,7 @@ export function AppRouter() {
           }
         />
 
-        <Route path="/" element={<TaroccoLayout />}>
+        <Route path="/" element={<OlindaLayout />}>
           <Route index element={<HomePage />} />
           <Route path="examples" element={<ExamplesPage />} />
           <Route path="examples/:patternId" element={<PatternPage />} />

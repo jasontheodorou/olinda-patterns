@@ -1,8 +1,0 @@
-.t-mask {
-  display: block;
-  overflow: clip;
-}
-
-.t-mask__item {
-  will-change: transform;
-}

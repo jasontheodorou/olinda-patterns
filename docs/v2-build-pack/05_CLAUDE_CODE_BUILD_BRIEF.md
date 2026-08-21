@@ -1,14 +1,14 @@
-# Claude Code Brief — Build Tarocco Pattern Library V2
+# Claude Code Brief — Build Olinda Pattern Library V2
 
 ## Role
 
 You are upgrading the existing repository:
 
-`jasontheodorou/tarocco-pattern-library`
+`jasontheodorou/olinda-pattern-library`
 
 Do not start a replacement repository.
 
-Preserve useful existing work and evolve it into Tarocco V2.
+Preserve useful existing work and evolve it into Olinda V2.
 
 ---
 
@@ -95,7 +95,7 @@ Do not throw away working experiments.
 
 Do not create a second competing pattern registry. Evolve/migrate the existing `PATTERNS` source of truth. The current single `ExperimentalPatternsGallery` registry entry should be decomposed into individually routable experimental entries while keeping a gallery view.
 
-The current npm package name is `design-sandbox` with `private: true`. During V2, rename the local package metadata to `tarocco-pattern-library` (still private) for clarity. Do not publish an npm package as part of V2.
+The current npm package name is `design-sandbox` with `private: true`. During V2, rename the local package metadata to `olinda-pattern-library` (still private) for clarity. Do not publish an npm package as part of V2.
 
 ## Phase 0 safety checkpoint
 
@@ -111,10 +111,10 @@ Before structural work:
 
 # 4. High-level architecture
 
-Create a reusable Tarocco motion layer:
+Create a reusable Olinda motion layer:
 
 ```text
-src/tarocco/
+src/olinda/
   core/
   patterns/
   experimental/
@@ -217,7 +217,7 @@ Create semantic motion styles:
 A pattern should normally accept:
 
 ```ts
-style?: TaroccoStyle;
+style?: OlindaStyle;
 energy?: "low" | "medium" | "high";
 speed?: "slow" | "normal" | "fast";
 ```
@@ -241,7 +241,7 @@ Patterns should consume values such as:
 - display font
 - body font
 
-The Tarocco application's own default theme may use the current Tarocco/Transform styling, but pattern code must remain brand-independent.
+The Olinda application's own default theme may use the current Olinda/Transform styling, but pattern code must remain brand-independent.
 
 ---
 
@@ -300,7 +300,7 @@ Keep it minimal.
 
 Suggested content:
 
-### Tarocco
+### Olinda
 
 Patterns for digital experiences.
 
@@ -362,7 +362,7 @@ Every pattern page must have a primary "Use with Claude" action.
 
 Generate a clear instruction that tells Claude to:
 
-- use the named Tarocco pattern;
+- use the named Olinda pattern;
 - adapt to the current project's colours/type;
 - preserve unrelated design;
 - respect reduced motion;
@@ -371,7 +371,7 @@ Generate a clear instruction that tells Claude to:
 Example:
 
 ```text
-Add Tarocco's "Large heading" pattern to this project.
+Add Olinda's "Large heading" pattern to this project.
 
 Apply it to the homepage heading.
 Style: Quiet
@@ -391,21 +391,21 @@ Run the build and fix integration errors.
 Create:
 
 - root `CLAUDE.md`;
-- `docs/TAROCCO.md`;
-- `src/tarocco/registry/tarocco.manifest.json`.
+- `docs/OLINDA.md`;
+- `src/olinda/registry/olinda.manifest.json`.
 
 Claude Code automatically loads root `CLAUDE.md`, so keep it concise and import the fuller guide:
 
 ```md
-# Tarocco
+# Olinda
 
-Read @docs/TAROCCO.md before changing Tarocco architecture or adding patterns.
+Read @docs/OLINDA.md before changing Olinda architecture or adding patterns.
 Read @package.json for current commands and versions.
 ```
 
-`docs/TAROCCO.md` must explain to an AI coding agent:
+`docs/OLINDA.md` must explain to an AI coding agent:
 
-- how Tarocco is structured;
+- how Olinda is structured;
 - how to inspect the registry;
 - how to install/copy a pattern;
 - how to theme it;
@@ -442,13 +442,13 @@ The existing `PasswordGate.tsx` is not secure access control: `VITE_GATE_PASSWOR
 
 Choose one deployment model explicitly:
 
-## Internal Tarocco (recommended for current Transform use)
+## Internal Olinda (recommended for current Transform use)
 
 - remove the client password gate as a security boundary;
 - enable Vercel Deployment Protection / Vercel Authentication in the Vercel project;
 - optionally keep a non-security welcome screen only if useful.
 
-## Public Tarocco
+## Public Olinda
 
 - remove the gate entirely.
 
@@ -518,7 +518,7 @@ A pattern may be marked Ready only if:
 - it has a demo;
 - its generated Claude instruction is sensible;
 - build/typecheck pass;
-- it can be copied/used outside the Tarocco gallery without manual surgery.
+- it can be copied/used outside the Olinda gallery without manual surgery.
 
 ---
 
@@ -529,7 +529,7 @@ For each existing experiment:
 1. Identify reusable behaviour.
 2. Replace duplicated animation logic with core behaviours where practical.
 3. Keep its visual identity.
-4. Move it under `src/tarocco/experimental`.
+4. Move it under `src/olinda/experimental`.
 5. Add registry metadata.
 6. Give it a simple frontend name if needed.
 7. Add reduced-motion behaviour.
@@ -573,7 +573,7 @@ Build:
 
 Create:
 - root `CLAUDE.md`;
-- `docs/TAROCCO.md`;
+- `docs/OLINDA.md`;
 - manifest;
 - prompt generation.
 
@@ -641,7 +641,7 @@ Do not:
 - make every element animate;
 - make experimental patterns appear production-safe;
 - embed Transform-specific colours/fonts in reusable pattern code;
-- require a command line to understand or use Tarocco.
+- require a command line to understand or use Olinda.
 
 ---
 
@@ -649,7 +649,7 @@ Do not:
 
 At completion, the repository should contain:
 
-- redesigned Tarocco site;
+- redesigned Olinda site;
 - live pattern gallery;
 - collections;
 - simple pattern controls;
@@ -661,7 +661,7 @@ At completion, the repository should contain:
 - registry;
 - machine-readable manifest;
 - root `CLAUDE.md`;
-- `docs/TAROCCO.md`;
+- `docs/OLINDA.md`;
 - repo-owned Claude Code web setup hook/script;
 - generated "Use with Claude" prompts;
 - accessibility/reduced-motion handling;
@@ -685,7 +685,7 @@ Give the site to a designer who has never opened the repository.
 
 They should be able to answer within a few minutes:
 
-- What is Tarocco?
+- What is Olinda?
 - What can I use?
 - Which things are calm?
 - Which things are more expressive?

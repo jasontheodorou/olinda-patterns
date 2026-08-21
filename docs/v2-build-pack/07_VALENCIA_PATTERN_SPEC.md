@@ -1,6 +1,6 @@
-# Tarocco V2 — Standard Pattern Specification
+# Olinda V2 — Standard Pattern Specification
 
-Every Tarocco pattern should be documented using this structure.
+Every Olinda pattern should be documented using this structure.
 
 ---
 
@@ -93,10 +93,10 @@ Example:
 ```ts
 export interface LargeHeadingProps {
   text: string;
-  style?: TaroccoStyle;
-  energy?: TaroccoEnergy;
-  speed?: TaroccoSpeed;
-  trigger?: TaroccoTrigger;
+  style?: OlindaStyle;
+  energy?: OlindaEnergy;
+  speed?: OlindaSpeed;
+  trigger?: OlindaTrigger;
   align?: "left" | "center" | "right";
   className?: string;
 }
@@ -165,10 +165,10 @@ This is agent/developer metadata, not designer-facing information.
 
 ```ts
 files: [
-  "src/tarocco/core/mask/Mask.tsx",
-  "src/tarocco/core/stagger/Stagger.tsx",
-  "src/tarocco/patterns/large-heading/LargeHeading.tsx",
-  "src/tarocco/patterns/large-heading/LargeHeading.css"
+  "src/olinda/core/mask/Mask.tsx",
+  "src/olinda/core/stagger/Stagger.tsx",
+  "src/olinda/patterns/large-heading/LargeHeading.tsx",
+  "src/olinda/patterns/large-heading/LargeHeading.css"
 ]
 ```
 
@@ -183,7 +183,7 @@ Every pattern must generate a useful instruction.
 Template:
 
 ```text
-Add Tarocco's "{{name}}" pattern to this project.
+Add Olinda's "{{name}}" pattern to this project.
 
 Apply it to:
 {{target}}
@@ -218,7 +218,7 @@ For public-sector context, examples might be:
 - Designing better public services
 - What happens next
 
-Do not make every demonstration government-themed. Tarocco should remain useful beyond one sector.
+Do not make every demonstration government-themed. Olinda should remain useful beyond one sector.
 
 ---
 
@@ -259,4 +259,4 @@ reference: {
 
 This is useful for future maintainers.
 
-It should not appear prominently on the public Tarocco frontend.
+It should not appear prominently on the public Olinda frontend.

@@ -1,14 +1,14 @@
 <p align="center">
-  <img src="public/orange.svg" width="80" alt="Tarocco" />
+  <img src="public/orange.svg" width="80" alt="Olinda" />
 </p>
 
-<h1 align="center">Tarocco pattern library</h1>
+<h1 align="center">Olinda pattern library</h1>
 
 <p align="center">Patterns for digital experiences — small, considered, useful.</p>
 
 ---
 
-Tarocco is a React + TypeScript + Vite pattern library. The designer surface is
+Olinda is a React + TypeScript + Vite pattern library. The designer surface is
 five semantic motion styles (Quiet · Clear · Editorial · Bold · Playful) applied to a
 handful of Ready patterns. Each pattern generates a "Use with Claude" prompt so
 you can drop it into another project.
@@ -23,12 +23,12 @@ you can drop it into another project.
 
 **Structure**
 
-- `src/tarocco/core/` — 8 reusable motion primitives
-- `src/tarocco/patterns/` — 10 Ready patterns (5 files each)
-- `src/tarocco/styles/` — semantic motion tokens + `resolveMotion`
-- `src/tarocco/theme/` — abstract theme contract; emits `--v-*` CSS variables
-- `src/tarocco/registry/` — the single source of truth + generated manifest
-- `src/tarocco/app/` — the designer-facing site
+- `src/olinda/core/` — 8 reusable motion primitives
+- `src/olinda/patterns/` — 10 Ready patterns (5 files each)
+- `src/olinda/styles/` — semantic motion tokens + `resolveMotion`
+- `src/olinda/theme/` — abstract theme contract; emits `--v-*` CSS variables
+- `src/olinda/registry/` — the single source of truth + generated manifest
+- `src/olinda/app/` — the designer-facing site
 - `src/legacy/` — 32 earlier UI patterns behind Mantine; lazy-loaded at `/legacy`
 
 **Sections**
@@ -36,7 +36,7 @@ you can drop it into another project.
 - **Examples** — every Ready pattern
 - **Collections** — Quiet · Clear · Bold · Playful · Editorial · Experimental
 - **Styles** — the five motion styles, with tokens
-- **Use** — how to use Tarocco with Claude Code
+- **Use** — how to use Olinda with Claude Code
 
 **Running locally**
 
@@ -50,6 +50,6 @@ npm run dev
 - `npm run dev` — Vite dev server
 - `npm run build` — regenerates the manifest, type-checks, and builds
 - `npm run test` — vitest unit tests
-- `npm run manifest` — regenerate `src/tarocco/registry/tarocco.manifest.json`
+- `npm run manifest` — regenerate `src/olinda/registry/olinda.manifest.json`
 
-Read `docs/TAROCCO.md` before adding or modifying patterns.
+Read `docs/OLINDA.md` before adding or modifying patterns.
