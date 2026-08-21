@@ -16,7 +16,8 @@
 /* ─── Hero ───────────────────────────────────────────────────────── */
 
 .v-home__hero {
-  padding: clamp(40px, 6vw, 88px) 0 clamp(40px, 6vw, 72px);
+  padding-block: clamp(40px, 6vw, 88px);
+  padding-inline: 0;
   max-width: 1080px;
 }
 
