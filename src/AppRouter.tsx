@@ -1,29 +1,29 @@
 import { lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router'
 import { MotionConfig } from 'motion/react'
-import { ValenciaThemeProvider } from './valencia/theme/ValenciaThemeProvider'
-import { defaultTheme } from './valencia/theme/defaultTheme'
-import { SiteChrome } from './valencia/app/components/SiteChrome'
-import { HomePage } from './valencia/app/pages/HomePage'
-import { ExamplesPage } from './valencia/app/pages/ExamplesPage'
-import { PatternPage } from './valencia/app/pages/PatternPage'
-import { CollectionPage } from './valencia/app/pages/CollectionPage'
-import { StylesPage } from './valencia/app/pages/StylesPage'
-import { UsePage } from './valencia/app/pages/UsePage'
-import { AboutPage } from './valencia/app/pages/AboutPage'
-import { NotFoundPage } from './valencia/app/pages/NotFoundPage'
+import { TaroccoThemeProvider } from './tarocco/theme/TaroccoThemeProvider'
+import { defaultTheme } from './tarocco/theme/defaultTheme'
+import { SiteChrome } from './tarocco/app/components/SiteChrome'
+import { HomePage } from './tarocco/app/pages/HomePage'
+import { ExamplesPage } from './tarocco/app/pages/ExamplesPage'
+import { PatternPage } from './tarocco/app/pages/PatternPage'
+import { CollectionPage } from './tarocco/app/pages/CollectionPage'
+import { StylesPage } from './tarocco/app/pages/StylesPage'
+import { UsePage } from './tarocco/app/pages/UsePage'
+import { AboutPage } from './tarocco/app/pages/AboutPage'
+import { NotFoundPage } from './tarocco/app/pages/NotFoundPage'
 
 const LegacyShell = lazy(() => import('./legacy'))
 
-function ValenciaLayout() {
+function TaroccoLayout() {
   return (
-    <ValenciaThemeProvider theme={defaultTheme}>
+    <TaroccoThemeProvider theme={defaultTheme}>
       <MotionConfig reducedMotion="user">
         <SiteChrome>
           <Outlet />
         </SiteChrome>
       </MotionConfig>
-    </ValenciaThemeProvider>
+    </TaroccoThemeProvider>
   )
 }
 
@@ -51,7 +51,7 @@ export function AppRouter() {
           }
         />
 
-        <Route path="/" element={<ValenciaLayout />}>
+        <Route path="/" element={<TaroccoLayout />}>
           <Route index element={<HomePage />} />
           <Route path="examples" element={<ExamplesPage />} />
           <Route path="examples/:patternId" element={<PatternPage />} />

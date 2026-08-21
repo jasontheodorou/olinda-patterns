@@ -1,0 +1,125 @@
+.t-styles {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 48px var(--t-space-page);
+}
+
+.t-styles__head { margin-bottom: 32px; max-width: 720px; }
+
+.t-styles__title {
+  margin: 0 0 12px;
+  font-family: var(--t-font-display);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  color: var(--t-text);
+  letter-spacing: -0.02em;
+}
+
+.t-styles__lede {
+  margin: 0;
+  font-family: var(--t-font-body);
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--t-muted);
+}
+
+.t-styles__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.t-styles__card {
+  padding: 24px;
+  background: var(--t-surface);
+  border-radius: var(--t-radius-md);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 150ms ease;
+}
+
+.t-styles__card:hover { transform: translateY(-2px); }
+
+.t-styles__card-name {
+  font-family: var(--t-font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--t-text);
+}
+
+.t-styles__card-desc {
+  font-family: var(--t-font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--t-muted);
+}
+
+.t-styles__card-nums {
+  margin-top: auto;
+  font-family: var(--t-font-mono);
+  font-size: 12px;
+  color: var(--t-muted);
+  padding-top: 8px;
+}
+
+.t-styles__crumb {
+  font-family: var(--t-font-body);
+  font-size: 13px;
+  color: var(--t-muted);
+  margin-bottom: 16px;
+}
+
+.t-styles__crumb a { color: var(--t-primary); text-decoration: none; }
+
+.t-styles__preview {
+  padding: 96px 0;
+  min-height: 400px;
+  display: grid;
+  place-items: center;
+}
+
+.t-styles__preview-headline {
+  margin: 0;
+  font-family: var(--t-font-display);
+  font-size: clamp(40px, 6.5vw, 88px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--t-text);
+  text-align: center;
+  max-width: 12ch;
+}
+
+.t-styles__tokens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  margin: 0;
+}
+
+.t-styles__tokens > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.t-styles__tokens dt {
+  font-family: var(--t-font-body);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--t-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.t-styles__tokens dd {
+  margin: 0;
+  font-family: var(--t-font-mono);
+  font-size: 15px;
+  color: var(--t-text);
+}

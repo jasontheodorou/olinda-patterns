@@ -1,8 +1,0 @@
-.v-mask {
-  display: block;
-  overflow: clip;
-}
-
-.v-mask__item {
-  will-change: transform;
-}
