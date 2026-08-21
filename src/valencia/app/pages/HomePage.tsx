@@ -9,12 +9,9 @@ type Chapter = {
 }
 
 const CHAPTERS: Chapter[] = [
-  { id: 'quiet',        label: 'Quiet',        description: 'Barely-there motion for calm surfaces and long reads.',                 art: 'quiet' },
-  { id: 'clear',        label: 'Clear',        description: 'Direct and functional. For task interfaces and dashboards.',            art: 'clear' },
-  { id: 'bold',         label: 'Bold',         description: 'Louder distance, more weight. For declarative headlines.',              art: 'bold' },
-  { id: 'playful',      label: 'Playful',      description: 'Springy and light. For lighter marketing touches and campaign pages.',  art: 'playful' },
-  { id: 'editorial',    label: 'Editorial',    description: 'Slower rhythm, longer arcs. For story-led pages and long-form work.',   art: 'editorial' },
-  { id: 'experimental', label: 'Experimental', description: 'Ideas in progress. Motion still being figured out.',                    art: 'experimental' },
+  { id: 'clear',        label: 'Clear',        description: 'Direct and functional. For task interfaces and dashboards.',          art: 'clear' },
+  { id: 'editorial',    label: 'Editorial',    description: 'Slower rhythm, longer arcs. For story-led pages and long-form work.', art: 'editorial' },
+  { id: 'experimental', label: 'Experimental', description: 'Ideas in progress. Motion still being figured out.',                  art: 'experimental' },
 ]
 
 export function HomePage() {
